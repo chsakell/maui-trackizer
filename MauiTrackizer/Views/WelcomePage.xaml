@@ -4,19 +4,47 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="WelcomePage"
+    BackgroundColor="{StaticResource Gray80}"
     Shell.NavBarIsVisible="False">
-    <Grid RowDefinitions="100,*,100">
-        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+    <Grid RowDefinitions="180,*,40,160">
+        <AbsoluteLayout>
             <Image
-                HeightRequest="20"
-                Source="logo.png"
-                VerticalOptions="Center"
-                WidthRequest="20" />
-            <Label
-                FontSize="18"
-                Text="TRACKIZER"
-                VerticalTextAlignment="Center" />
-        </HorizontalStackLayout>
+                Grid.Row="1"
+                AbsoluteLayout.LayoutBounds="-500, 50"
+                Source="welcome_abstract.png" />
+
+            <Image
+                Grid.Row="1"
+                AbsoluteLayout.LayoutBounds="350, 300"
+                Source="welcome_abstract.png" />
+
+        </AbsoluteLayout>
+        <Image
+            HeightRequest="200"
+            Source="logo.png"
+            VerticalOptions="Center"
+            WidthRequest="200" />
+
+
+
         <Image Grid.Row="1" Source="welcome_services.png" />
+        <Label
+            Grid.Row="2"
+            FontSize="Medium"
+            HorizontalOptions="Center"
+            Text="Track all your subscriptions in on place"
+            TextColor="{StaticResource White}" />
+
+        <VerticalStackLayout
+            Grid.Row="3"
+            Margin="0,30"
+            HorizontalOptions="Center"
+            Spacing="20">
+            <Button
+                BackgroundColor="{StaticResource PrimaryAccent100}"
+                FontSize="Medium"
+                Text="Get started" />
+            <Button FontSize="Medium" Text="I have an account" />
+        </VerticalStackLayout>
     </Grid>
 </ContentPage>
