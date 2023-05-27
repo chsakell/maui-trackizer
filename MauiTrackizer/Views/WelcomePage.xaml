@@ -8,9 +8,12 @@
     Shell.NavBarIsVisible="False">
     <Grid RowDefinitions="140,*,40,160">
         <AbsoluteLayout>
+
+            <Image Grid.Row="1" Source="welcome_glow.png" />
+
             <Image
                 Grid.Row="1"
-                AbsoluteLayout.LayoutBounds="-220, 80,300,300"
+                AbsoluteLayout.LayoutBounds="-240, 80,300,300"
                 Source="welcome_abstract.png" />
 
             <Image

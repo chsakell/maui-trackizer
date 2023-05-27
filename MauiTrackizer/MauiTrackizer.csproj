@@ -51,6 +51,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\logo.svg" />
 	  <None Remove="Resources\Images\welcome_abstract.png" />
+	  <None Remove="Resources\Images\welcome_glow.png" />
 	  <None Remove="Resources\Images\welcome_services.png" />
 	</ItemGroup>
 
