@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <?xaml-comp compile="true" ?>
-<ResourceDictionary 
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <Color x:Key="Primary">#E4D3FF</Color>
     <Color x:Key="Primary05">#C9A7FF</Color>
@@ -25,5 +23,6 @@
     <Color x:Key="Gray70">#353542</Color>
     <Color x:Key="Gray80">#1C1C23</Color>
     <Color x:Key="Gray100">#0E0E12</Color>
+    <Color x:Key="Blue">#1771E6</Color>
 
 </ResourceDictionary>

@@ -5,12 +5,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiTrackizer"
     xmlns:views="clr-namespace:MauiTrackizer.Views"
-    Shell.NavBarIsVisible="False"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.FlyoutBehavior="Flyout"
+    Shell.NavBarIsVisible="False">
 
     <ShellContent
-        Title="Home"
+        Title="Signup options"
+        ContentTemplate="{DataTemplate views:SignUpOptionsPage}"
+        Route="SignUpOptions" />
+
+    <ShellContent
+        Title="Welcome"
         ContentTemplate="{DataTemplate views:WelcomePage}"
-        Route="MainPage" />
+        Route="Welcome" />
+
+
+
+
 
 </Shell>
