@@ -6,16 +6,16 @@
     Title="WelcomePage"
     BackgroundColor="{StaticResource Gray80}"
     Shell.NavBarIsVisible="False">
-    <Grid RowDefinitions="180,*,40,160">
+    <Grid RowDefinitions="140,*,40,160">
         <AbsoluteLayout>
             <Image
                 Grid.Row="1"
-                AbsoluteLayout.LayoutBounds="-500, 50"
+                AbsoluteLayout.LayoutBounds="-220, 80,300,300"
                 Source="welcome_abstract.png" />
 
             <Image
                 Grid.Row="1"
-                AbsoluteLayout.LayoutBounds="350, 300"
+                AbsoluteLayout.LayoutBounds="350, 400, 200, 200"
                 Source="welcome_abstract.png" />
 
         </AbsoluteLayout>
@@ -37,14 +37,20 @@
 
         <VerticalStackLayout
             Grid.Row="3"
-            Margin="0,30"
-            HorizontalOptions="Center"
-            Spacing="20">
+            Margin="40,30"
+            Spacing="10">
             <Button
+                Padding="0,10"
                 BackgroundColor="{StaticResource PrimaryAccent100}"
+                CornerRadius="50"
                 FontSize="Medium"
                 Text="Get started" />
-            <Button FontSize="Medium" Text="I have an account" />
+            <Button
+                Padding="0,10"
+                BackgroundColor="{StaticResource Gray70}"
+                CornerRadius="50"
+                FontSize="Medium"
+                Text="I have an account" />
         </VerticalStackLayout>
     </Grid>
 </ContentPage>
