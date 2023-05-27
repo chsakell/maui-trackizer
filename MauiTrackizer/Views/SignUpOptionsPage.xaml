@@ -12,10 +12,9 @@
             WidthRequest="200" />
 
         <VerticalStackLayout
-            Grid.Row="5"
-            Grid.RowSpan="3"
+            Grid.Row="4"
             Margin="40"
-            Spacing="10"
+            Spacing="15"
             VerticalOptions="End">
             <Button
                 Padding="0,10"
