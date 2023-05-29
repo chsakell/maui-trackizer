@@ -5,7 +5,71 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="SignUpOptionsPage"
     BackgroundColor="{StaticResource Gray80}">
-    <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*">
+    <Grid RowDefinitions="*,  100, Auto">
+
+        <VerticalStackLayout>
+            <Image
+                Margin="0,40,0,0"
+                Source="logo.png"
+                WidthRequest="200" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout
+            Padding="30,30,30,0"
+            Spacing="15"
+            VerticalOptions="End">
+            <Button
+                BackgroundColor="Black"
+                CornerRadius="50"
+                FontSize="Medium"
+                ImageSource="apple.png"
+                Text="Sign up with Apple" />
+            <Button
+                BackgroundColor="White"
+                CornerRadius="50"
+                FontSize="Medium"
+                ImageSource="google.png"
+                Text="Sign up with Google"
+                TextColor="Black" />
+            <Button
+                BackgroundColor="{StaticResource Blue}"
+                CornerRadius="50"
+                FontSize="Medium"
+                ImageSource="facebook.png"
+                Text="Sign up with Facebook" />
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="3" Margin="0,-40">
+            <Label
+                FontSize="Medium"
+                HorizontalTextAlignment="Center"
+                Text="Or"
+                TextColor="{StaticResource White}" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout
+            Grid.Row="4"
+            Padding="30,30,30,50"
+            HorizontalOptions="Fill"
+            Spacing="15"
+            VerticalOptions="End">
+
+            <Button
+                BackgroundColor="{StaticResource Gray70}"
+                CornerRadius="30"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                HeightRequest="50"
+                Text="Sign up with E-mail" />
+            <Label
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="By registering, you agree to our Terms of Use. Learn how we collect, use and share your date"
+                TextColor="{StaticResource Gray50}" />
+        </VerticalStackLayout>
+    </Grid>
+    <!--<Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*">
         <Image
             Source="logo.png"
             VerticalOptions="Center"
@@ -65,5 +129,5 @@
                 Text="By registering, you agree to our Terms of Use. Learn how we collect, use and share your date"
                 TextColor="{StaticResource Gray50}" />
         </VerticalStackLayout>
-    </Grid>
+    </Grid>-->
 </ContentPage>
