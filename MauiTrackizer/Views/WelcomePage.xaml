@@ -6,7 +6,63 @@
     Title="WelcomePage"
     BackgroundColor="{StaticResource Gray80}"
     Shell.NavBarIsVisible="False">
-    <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*">
+    <Grid RowDefinitions="*, Auto">
+
+        <AbsoluteLayout>
+
+            <Image Source="welcome_glow.png" />
+
+            <Image AbsoluteLayout.LayoutBounds="-240, 80,300,300" Source="welcome_abstract.png" />
+
+            <Image AbsoluteLayout.LayoutBounds="350, 400, 200, 200" Source="welcome_abstract.png" />
+
+        </AbsoluteLayout>
+        <VerticalStackLayout>
+            <Image
+                Grid.RowSpan="1"
+                Margin="0,40,0,0"
+                Source="logo.png"
+                VerticalOptions="Center"
+                WidthRequest="200" />
+
+            <Image
+                Margin="-5,0,-5,0"
+                Aspect="AspectFill"
+                Opacity="1"
+                Source="welcome_services.png"
+                VerticalOptions="End" />
+        </VerticalStackLayout>
+
+
+        <VerticalStackLayout
+            Grid.Row="1"
+            Padding="30,0,30,50"
+            HorizontalOptions="Fill"
+            Spacing="15"
+            VerticalOptions="End">
+            <Label
+                Margin="0,20"
+                FontSize="Medium"
+                HorizontalOptions="Center"
+                Text="Track all your subscriptions in on place"
+                TextColor="{StaticResource White}" />
+            <Button
+                BackgroundColor="{StaticResource PrimaryAccent100}"
+                CornerRadius="30"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                HeightRequest="50"
+                Text="Get started" />
+            <Button
+                BackgroundColor="{StaticResource Gray70}"
+                CornerRadius="30"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                HeightRequest="50"
+                Text="I have an account" />
+        </VerticalStackLayout>
+    </Grid>
+    <!--<Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*">
         <AbsoluteLayout>
 
             <Image Grid.Row="1" Source="welcome_glow.png" />
@@ -58,5 +114,5 @@
                 FontSize="Medium"
                 Text="I have an account" />
         </VerticalStackLayout>
-    </Grid>
+    </Grid>-->
 </ContentPage>
