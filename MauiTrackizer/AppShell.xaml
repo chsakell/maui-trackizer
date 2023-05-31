@@ -8,17 +8,15 @@
     Shell.FlyoutBehavior="Flyout"
     Shell.NavBarIsVisible="False">
 
+    <ShellContent
+        Title="Signup"
+        ContentTemplate="{DataTemplate views:SignUpPage}"
+        Route="SignUpOptions" />
 
     <ShellContent
         Title="Signup options"
         ContentTemplate="{DataTemplate views:SignUpOptionsPage}"
         Route="SignUpOptions" />
-    <ShellContent
-        Title="Signup options"
-        ContentTemplate="{DataTemplate views:SignUpPage}"
-        Route="SignUpOptions" />
-
-
 
     <ShellContent
         Title="Welcome "

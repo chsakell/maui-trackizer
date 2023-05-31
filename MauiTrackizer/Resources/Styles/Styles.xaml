@@ -1,11 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <?xaml-comp compile="true" ?>
-<ResourceDictionary 
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <Style TargetType="ContentPage">
-        <Setter Property="BackgroundColor" Value="{StaticResource Gray80}"></Setter>
+        <Setter Property="BackgroundColor" Value="{StaticResource Gray80}" />
+    </Style>
+
+    <Style TargetType="Border">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray80}" />
+        <Setter Property="Stroke" Value="{DynamicResource Gray50}" />
+        <Setter Property="StrokeShape" Value="{RoundRectangle CornerRadius=14}" />
+        <Setter Property="StrokeThickness" Value="1" />
     </Style>
 
     <!--<Style TargetType="ActivityIndicator">

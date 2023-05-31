@@ -4,6 +4,8 @@ using Microsoft.UI.Windowing;
 using Windows.Graphics;
 #endif
 
+using MauiTrackizer.Handlers;
+
 namespace MauiTrackizer;
 
 public partial class App : Application
@@ -11,6 +13,26 @@ public partial class App : Application
 	public App()
 	{
 		InitializeComponent();
+
+        #region Handlers
+
+        //Borderless entry
+        Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping(nameof(BorderlessEntry), (handler, view) =>
+        {
+            if (view is BorderlessEntry)
+            {
+#if __ANDROID__
+                handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
+#elif __IOS__
+                    handler.PlatformView.BorderStyle = UIKit.UITextBorderStyle.None;
+#elif __WINDOWS__
+                handler.PlatformView.FontWeight = Microsoft.UI.Text.FontWeights.Thin;
+                handler.PlatformView.TextBox.BorderThickness = new Thickness(0);
+#endif
+            }
+        });
+
+        #endregion
 
 #if WINDOWS
         SetWindowsSize();
