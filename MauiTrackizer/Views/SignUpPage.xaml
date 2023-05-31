@@ -13,83 +13,94 @@
                 Source="logo.png"
                 WidthRequest="200" />
         </VerticalStackLayout>
-        <ScrollView Grid.Row="2" VerticalScrollBarVisibility="Default">
-            <VerticalStackLayout Margin="20,0,20,20" Spacing="40">
-                <VerticalStackLayout Spacing="15">
+        <VerticalStackLayout
+            Grid.Row="2"
+            Margin="20,0,20,20"
+            Spacing="40">
+            <VerticalStackLayout Margin="0,5" Spacing="15">
 
-                    <StackLayout Spacing="5">
-                        <Label Text="E-mail address" TextColor="{DynamicResource Gray50}" />
-                        <Border
-                            Margin="0"
-                            Padding="0"
-                            HorizontalOptions="FillAndExpand"
-                            StrokeShape="{RoundRectangle CornerRadius=14}">
-                            <StackLayout
-                                Margin="16,2"
-                                Orientation="Horizontal"
-                                VerticalOptions="CenterAndExpand">
-                                <handlers:BorderlessEntry
-                                    Margin="8,0"
-                                    HeightRequest="50"
-                                    HorizontalOptions="FillAndExpand"
-                                    Keyboard="Default"
-                                    TextColor="White" />
-                            </StackLayout>
-                        </Border>
-                    </StackLayout>
+                <StackLayout Spacing="5">
+                    <Label Text="E-mail address" TextColor="{DynamicResource Gray50}" />
+                    <Border
+                        Margin="0"
+                        Padding="0"
+                        HorizontalOptions="FillAndExpand"
+                        StrokeShape="{RoundRectangle CornerRadius=14}">
+                        <StackLayout
+                            Margin="16,2"
+                            Orientation="Horizontal"
+                            VerticalOptions="CenterAndExpand">
+                            <handlers:BorderlessEntry
+                                Margin="8,0"
+                                HeightRequest="50"
+                                HorizontalOptions="FillAndExpand"
+                                Keyboard="Default"
+                                TextColor="White" />
+                        </StackLayout>
+                    </Border>
+                </StackLayout>
 
-                    <StackLayout Spacing="5">
-                        <Label Text="Password" TextColor="{DynamicResource Gray50}" />
-                        <Border
-                            Margin="0"
-                            Padding="0"
-                            HorizontalOptions="FillAndExpand"
-                            StrokeShape="{RoundRectangle CornerRadius=14}">
-                            <StackLayout
-                                Margin="16,2"
-                                Orientation="Horizontal"
-                                VerticalOptions="CenterAndExpand">
-                                <handlers:BorderlessEntry
-                                    Margin="8,0"
-                                    HeightRequest="50"
-                                    HorizontalOptions="FillAndExpand"
-                                    Keyboard="Default"
-                                    TextColor="White" />
-                            </StackLayout>
-                        </Border>
-                    </StackLayout>
+                <StackLayout Spacing="5">
+                    <Label Text="Password" TextColor="{DynamicResource Gray50}" />
+                    <Border
+                        Margin="0"
+                        Padding="0"
+                        HorizontalOptions="FillAndExpand"
+                        StrokeShape="{RoundRectangle CornerRadius=14}">
+                        <StackLayout
+                            Margin="16,2"
+                            Orientation="Horizontal"
+                            VerticalOptions="CenterAndExpand">
+                            <handlers:BorderlessEntry
+                                Margin="8,0"
+                                HeightRequest="50"
+                                HorizontalOptions="FillAndExpand"
+                                IsPassword="True"
+                                Keyboard="Default"
+                                TextColor="White" />
+                        </StackLayout>
+                    </Border>
+                </StackLayout>
 
-                    <Button
-                        BackgroundColor="{StaticResource PrimaryAccent100}"
-                        CornerRadius="50"
-                        FontSize="Medium"
-                        Text="Get started, it's free!" />
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <Border StrokeThickness="2" WidthRequest="90" />
+                    <Border StrokeThickness="2" WidthRequest="90" />
+                    <Border StrokeThickness="2" WidthRequest="90" />
+                    <Border StrokeThickness="2" WidthRequest="90" />
+                </FlexLayout>
 
-                </VerticalStackLayout>
+                <Label Text="Use 8 or more characters, with a mix of letters, numbers and symbols" TextColor="{DynamicResource Gray50}" />
 
-                <Label
-                    FontSize="Small"
-                    HorizontalTextAlignment="Center"
-                    Text=""
-                    TextColor="{StaticResource White}" />
-
-
-                <VerticalStackLayout HorizontalOptions="Fill" Spacing="15">
-
-                    <Button
-                        BackgroundColor="{StaticResource Gray70}"
-                        CornerRadius="30"
-                        FontAttributes="Bold"
-                        FontSize="Medium"
-                        HeightRequest="50"
-                        Text="Sign up with E-mail" />
-                    <Label
-                        HorizontalOptions="Center"
-                        HorizontalTextAlignment="Center"
-                        Text="By registering, you agree to our Terms of Use. Learn how we collect, use and share your date"
-                        TextColor="{StaticResource Gray50}" />
-                </VerticalStackLayout>
             </VerticalStackLayout>
-        </ScrollView>
+
+            <Button
+                BackgroundColor="{StaticResource PrimaryAccent100}"
+                CornerRadius="50"
+                FontSize="Medium"
+                Text="Get started, it's free!" />
+
+            <Label
+                FontSize="Small"
+                HorizontalTextAlignment="Center"
+                Text=""
+                TextColor="{StaticResource White}" />
+
+
+            <VerticalStackLayout HorizontalOptions="Fill" Spacing="15">
+                <Label
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="Do you have already an account?"
+                    TextColor="{StaticResource Gray50}" />
+                <Button
+                    BackgroundColor="{StaticResource Gray70}"
+                    CornerRadius="30"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    HeightRequest="50"
+                    Text="Sign In" />
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
     </Grid>
 </ContentPage>
