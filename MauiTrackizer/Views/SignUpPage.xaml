@@ -63,10 +63,10 @@
                 </StackLayout>
 
                 <FlexLayout JustifyContent="SpaceBetween">
-                    <Border StrokeThickness="2" WidthRequest="90" />
-                    <Border StrokeThickness="2" WidthRequest="90" />
-                    <Border StrokeThickness="2" WidthRequest="90" />
-                    <Border StrokeThickness="2" WidthRequest="90" />
+                    <Border StrokeThickness="3" WidthRequest="90" />
+                    <Border StrokeThickness="3" WidthRequest="90" />
+                    <Border StrokeThickness="3" WidthRequest="90" />
+                    <Border StrokeThickness="3" WidthRequest="90" />
                 </FlexLayout>
 
                 <Label Text="Use 8 or more characters, with a mix of letters, numbers and symbols" TextColor="{DynamicResource Gray50}" />
@@ -91,7 +91,7 @@
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     Text="Do you have already an account?"
-                    TextColor="{StaticResource Gray50}" />
+                    TextColor="White" />
                 <Button
                     BackgroundColor="{StaticResource Gray70}"
                     CornerRadius="30"

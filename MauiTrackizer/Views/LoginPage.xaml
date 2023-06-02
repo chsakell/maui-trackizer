@@ -1,12 +1,115 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiTrackizer.Views.LoginPage"
-             Title="LoginPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    x:Class="MauiTrackizer.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:handlers="clr-namespace:MauiTrackizer.Handlers"
+    Title="LoginPage"
+    BackgroundColor="{StaticResource Gray80}">
+    <Grid RowDefinitions="*,  Auto">
+        <VerticalStackLayout>
+            <Image
+                Margin="0,40,0,0"
+                Source="logo.png"
+                WidthRequest="200" />
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Row="2"
+            Margin="20,0,20,20"
+            Spacing="40">
+            <VerticalStackLayout Margin="0,5" Spacing="15">
+
+                <StackLayout Spacing="5">
+                    <Label Text="E-mail address" TextColor="{DynamicResource Gray50}" />
+                    <Border
+                        Margin="0"
+                        Padding="0"
+                        HorizontalOptions="FillAndExpand"
+                        StrokeShape="{RoundRectangle CornerRadius=14}">
+                        <StackLayout
+                            Margin="16,2"
+                            Orientation="Horizontal"
+                            VerticalOptions="CenterAndExpand">
+                            <handlers:BorderlessEntry
+                                Margin="8,0"
+                                HeightRequest="50"
+                                HorizontalOptions="FillAndExpand"
+                                Keyboard="Default"
+                                TextColor="White" />
+                        </StackLayout>
+                    </Border>
+                </StackLayout>
+
+                <StackLayout Spacing="5">
+                    <Label Text="Password" TextColor="{DynamicResource Gray50}" />
+                    <Border
+                        Margin="0"
+                        Padding="0"
+                        HorizontalOptions="FillAndExpand"
+                        StrokeShape="{RoundRectangle CornerRadius=14}">
+                        <StackLayout
+                            Margin="16,2"
+                            Orientation="Horizontal"
+                            VerticalOptions="CenterAndExpand">
+                            <handlers:BorderlessEntry
+                                Margin="8,0"
+                                HeightRequest="50"
+                                HorizontalOptions="FillAndExpand"
+                                IsPassword="True"
+                                Keyboard="Default"
+                                TextColor="White" />
+                        </StackLayout>
+                    </Border>
+                </StackLayout>
+
+                <Grid ColumnDefinitions="*,*">
+                    <HorizontalStackLayout>
+                        <CheckBox Color="{StaticResource Gray50}" />
+                        <Label
+                            Text="Remember me"
+                            TextColor="{StaticResource Gray50}"
+                            VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+
+                    <Label
+                        Grid.Column="2"
+                        HorizontalOptions="End"
+                        Text="Forgot password"
+                        TextColor="{StaticResource Gray50}"
+                        VerticalOptions="Center" />
+
+                </Grid>
+
+            </VerticalStackLayout>
+
+            <Button
+                BackgroundColor="{StaticResource PrimaryAccent100}"
+                CornerRadius="50"
+                FontSize="Medium"
+                Text="Sign In" />
+
+            <Label
+                FontSize="Small"
+                HorizontalTextAlignment="Center"
+                Text=""
+                TextColor="{StaticResource White}" />
+
+
+            <VerticalStackLayout HorizontalOptions="Fill" Spacing="15">
+                <Label
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="You don't have an account yet?"
+                    TextColor="White" />
+                <Button
+                    BackgroundColor="{StaticResource Gray70}"
+                    CornerRadius="30"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    HeightRequest="50"
+                    Text="Sign Up" />
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>

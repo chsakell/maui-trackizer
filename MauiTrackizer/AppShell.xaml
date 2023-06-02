@@ -10,7 +10,7 @@
 
     <ShellContent
         Title="Signup"
-        ContentTemplate="{DataTemplate views:SignUpPage}"
+        ContentTemplate="{DataTemplate views:LoginPage}"
         Route="SignUpOptions" />
 
     <ShellContent
