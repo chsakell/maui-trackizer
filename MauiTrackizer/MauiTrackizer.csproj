@@ -53,9 +53,12 @@
 	  <None Remove="Resources\Images\facebook.png" />
 	  <None Remove="Resources\Images\google.png" />
 	  <None Remove="Resources\Images\logo.svg" />
+	  <None Remove="Resources\Images\onedrive_logo.png" />
+	  <None Remove="Resources\Images\spotify_logo.png" />
 	  <None Remove="Resources\Images\welcome_abstract.png" />
 	  <None Remove="Resources\Images\welcome_glow.png" />
 	  <None Remove="Resources\Images\welcome_services.png" />
+	  <None Remove="Resources\Images\youtube_logo.png" />
 	</ItemGroup>
 
 	<ItemGroup>

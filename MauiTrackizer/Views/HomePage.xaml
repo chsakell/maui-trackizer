@@ -5,16 +5,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="HomePage"
     BackgroundColor="{StaticResource Gray80}">
-    <Grid RowDefinitions="*,*">
+    <Grid RowDefinitions="*,80,*">
 
         <Border
             Margin="-2"
             BackgroundColor="{StaticResource Gray70}"
             Stroke="#d0d7de"
             StrokeThickness="0">
-            <Border.Shadow>
-                <Shadow Opacity="0.9" />
-            </Border.Shadow>
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="0,0,30,30" />
             </Border.StrokeShape>
@@ -44,7 +41,7 @@
                         StrokeThickness="0"
                         WidthRequest="140">
                         <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="30,0" />
+                            <RoundRectangle CornerRadius="30" />
                         </Border.StrokeShape>
                         <Label
                             FontSize="Small"
@@ -123,6 +120,113 @@
             </Grid>
         </Border>
 
+        <Border
+            Grid.Row="1"
+            Margin="20,0"
+            BackgroundColor="Black"
+            HeightRequest="60"
+            StrokeThickness="0">
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="20"
+                VerticalOptions="CenterAndExpand">
+                <Button
+                    BackgroundColor="{StaticResource Gray60}"
+                    CornerRadius="20"
+                    Text="Your subscriptions"
+                    TextColor="White"
+                    WidthRequest="150" />
+                <Button
+                    BackgroundColor="Black"
+                    CornerRadius="20"
+                    Text="Upcoming bills"
+                    WidthRequest="150" />
+            </HorizontalStackLayout>
+        </Border>
 
+
+        <Grid Grid.Row="2" Margin="20,0">
+            <VerticalStackLayout Spacing="20">
+                <Border>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="30" />
+                    </Border.StrokeShape>
+                    <Grid Padding="20" ColumnDefinitions="*,*">
+                        <HorizontalStackLayout Spacing="20">
+                            <Image
+                                HeightRequest="60"
+                                Source="spotify_logo.png"
+                                WidthRequest="60" />
+                            <Label
+                                FontSize="Large"
+                                Text="Spotify"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+
+                        <Label
+                            Grid.Column="1"
+                            FontSize="Large"
+                            HorizontalTextAlignment="End"
+                            Text="$5.99"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+                <Border>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="30" />
+                    </Border.StrokeShape>
+                    <Grid Padding="20" ColumnDefinitions="*,*">
+                        <HorizontalStackLayout Spacing="20">
+                            <Image
+                                HeightRequest="60"
+                                Source="youtube_logo.png"
+                                WidthRequest="60" />
+                            <Label
+                                FontSize="Large"
+                                Text="Youtube"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+
+                        <Label
+                            Grid.Column="1"
+                            FontSize="Large"
+                            HorizontalTextAlignment="End"
+                            Text="$5.99"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+                <Border>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="30" />
+                    </Border.StrokeShape>
+                    <Grid Padding="20" ColumnDefinitions="*,*">
+                        <HorizontalStackLayout Spacing="20">
+                            <Image
+                                HeightRequest="60"
+                                Source="onedrive_logo.png"
+                                WidthRequest="60" />
+                            <Label
+                                FontSize="Large"
+                                Text="One Drive"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+
+                        <Label
+                            Grid.Column="1"
+                            FontSize="Large"
+                            HorizontalTextAlignment="End"
+                            Text="$5.99"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+            </VerticalStackLayout>
+
+        </Grid>
     </Grid>
 </ContentPage>
