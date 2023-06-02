@@ -1,12 +1,128 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiTrackizer.Views.HomePage"
-             Title="HomePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!!!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    x:Class="MauiTrackizer.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="HomePage"
+    BackgroundColor="{StaticResource Gray80}">
+    <Grid RowDefinitions="*,*">
+
+        <Border
+            Margin="-2"
+            BackgroundColor="{StaticResource Gray70}"
+            Stroke="#d0d7de"
+            StrokeThickness="0">
+            <Border.Shadow>
+                <Shadow Opacity="0.9" />
+            </Border.Shadow>
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="0,0,30,30" />
+            </Border.StrokeShape>
+            <Grid Margin="0,20" RowDefinitions=".7*,.3*">
+                <VerticalStackLayout Spacing="15" VerticalOptions="End">
+                    <Image
+                        Margin="0,40,0,0"
+                        Source="logo.png"
+                        WidthRequest="150" />
+                    <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="40"
+                            HorizontalOptions="Center"
+                            Text="$1.235"
+                            TextColor="White" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            HorizontalOptions="Center"
+                            Text="This month bills"
+                            TextColor="{StaticResource Gray50}" />
+                    </VerticalStackLayout>
+                    <Border
+                        BackgroundColor="{StaticResource Gray60}"
+                        HeightRequest="40"
+                        StrokeThickness="0"
+                        WidthRequest="140">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="30,0" />
+                        </Border.StrokeShape>
+                        <Label
+                            FontSize="Small"
+                            HorizontalOptions="Center"
+                            Text="See your budget"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </Border>
+
+                </VerticalStackLayout>
+                <FlexLayout
+                    Grid.Row="2"
+                    JustifyContent="SpaceEvenly"
+                    VerticalOptions="End">
+                    <Border
+                        BackgroundColor="{StaticResource Gray80}"
+                        HeightRequest="80"
+                        StrokeThickness="0"
+                        WidthRequest="120">
+                        <Border.Shadow>
+                            <Shadow Opacity="0.1" />
+                        </Border.Shadow>
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                Text="Active subs"
+                                TextColor="{StaticResource Gray50}" />
+                            <Label
+                                HorizontalOptions="Center"
+                                Text="12"
+                                TextColor="White" />
+                        </VerticalStackLayout>
+                    </Border>
+                    <Border
+                        BackgroundColor="{StaticResource Gray80}"
+                        HeightRequest="80"
+                        StrokeThickness="0"
+                        WidthRequest="120">
+                        <Border.Shadow>
+                            <Shadow Opacity="0.1" />
+                        </Border.Shadow>
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                Text="Active subs"
+                                TextColor="{StaticResource Gray50}" />
+                            <Label
+                                HorizontalOptions="Center"
+                                Text="12"
+                                TextColor="White" />
+                        </VerticalStackLayout>
+                    </Border>
+                    <Border
+                        BackgroundColor="{StaticResource Gray80}"
+                        HeightRequest="80"
+                        StrokeThickness="0"
+                        WidthRequest="120">
+                        <Border.Shadow>
+                            <Shadow Opacity="0.1" />
+                        </Border.Shadow>
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                Text="Active subs"
+                                TextColor="{StaticResource Gray50}" />
+                            <Label
+                                HorizontalOptions="Center"
+                                Text="12"
+                                TextColor="White" />
+                        </VerticalStackLayout>
+                    </Border>
+                </FlexLayout>
+            </Grid>
+        </Border>
+
+
+    </Grid>
 </ContentPage>

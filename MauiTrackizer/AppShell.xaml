@@ -9,6 +9,11 @@
     Shell.NavBarIsVisible="False">
 
     <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:HomePage}"
+        Route="Home" />
+
+    <ShellContent
         Title="Signup"
         ContentTemplate="{DataTemplate views:LoginPage}"
         Route="SignUpOptions" />
