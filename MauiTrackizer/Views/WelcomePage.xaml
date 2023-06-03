@@ -8,7 +8,6 @@
     Shell.NavBarIsVisible="False">
     <Grid RowDefinitions="*, 100, Auto">
 
-
         <AbsoluteLayout>
 
             <Image Source="welcome_glow.png" />

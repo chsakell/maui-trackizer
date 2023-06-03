@@ -9,9 +9,14 @@
 
         <Border
             Margin="-2"
-            BackgroundColor="{StaticResource Gray70}"
             Stroke="#d0d7de"
             StrokeThickness="0">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Offset="0.2" Color="{StaticResource Gray70}" />
+                    <GradientStop Offset="1.0" Color="{StaticResource Gray100}" />
+                </LinearGradientBrush>
+            </Border.Background>
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="0,0,30,30" />
             </Border.StrokeShape>
@@ -20,7 +25,7 @@
                     <Image
                         Margin="0,40,0,0"
                         Source="logo.png"
-                        WidthRequest="150" />
+                        WidthRequest="110" />
                     <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
                         <Label
                             FontAttributes="Bold"
@@ -36,8 +41,8 @@
                             TextColor="{StaticResource Gray50}" />
                     </VerticalStackLayout>
                     <Border
-                        BackgroundColor="{StaticResource Gray60}"
-                        HeightRequest="40"
+                        BackgroundColor="{StaticResource Gray70}"
+                        HeightRequest="35"
                         StrokeThickness="0"
                         WidthRequest="140">
                         <Border.StrokeShape>
@@ -58,19 +63,22 @@
                     VerticalOptions="End">
                     <Border
                         BackgroundColor="{StaticResource Gray80}"
-                        HeightRequest="80"
+                        HeightRequest="70"
                         StrokeThickness="0"
-                        WidthRequest="120">
-                        <Border.Shadow>
-                            <Shadow Opacity="0.1" />
-                        </Border.Shadow>
-                        <VerticalStackLayout VerticalOptions="Center">
+                        WidthRequest="100">
+                        <VerticalStackLayout Spacing="0" VerticalOptions="Start">
+                            <Border
+                                Stroke="{StaticResource PrimaryAccent50}"
+                                StrokeThickness="1"
+                                WidthRequest="50" />
                             <Label
+                                Margin="0,15,0,0"
                                 FontAttributes="Bold"
                                 HorizontalOptions="Center"
                                 Text="Active subs"
-                                TextColor="{StaticResource Gray50}" />
+                                TextColor="{StaticResource Gray40}" />
                             <Label
+                                FontAttributes="Bold"
                                 HorizontalOptions="Center"
                                 Text="12"
                                 TextColor="White" />
@@ -78,41 +86,49 @@
                     </Border>
                     <Border
                         BackgroundColor="{StaticResource Gray80}"
-                        HeightRequest="80"
+                        HeightRequest="70"
                         StrokeThickness="0"
-                        WidthRequest="120">
-                        <Border.Shadow>
-                            <Shadow Opacity="0.1" />
-                        </Border.Shadow>
-                        <VerticalStackLayout VerticalOptions="Center">
+                        WidthRequest="100">
+
+                        <VerticalStackLayout Spacing="0" VerticalOptions="Start">
+                            <Border
+                                Stroke="{StaticResource Primary100}"
+                                StrokeThickness="1"
+                                WidthRequest="50" />
+                            <Label
+                                Margin="0,15,0,0"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                Text="Highest subs"
+                                TextColor="{StaticResource Gray40}" />
                             <Label
                                 FontAttributes="Bold"
                                 HorizontalOptions="Center"
-                                Text="Active subs"
-                                TextColor="{StaticResource Gray50}" />
-                            <Label
-                                HorizontalOptions="Center"
-                                Text="12"
+                                Text="$19.99"
                                 TextColor="White" />
                         </VerticalStackLayout>
                     </Border>
                     <Border
                         BackgroundColor="{StaticResource Gray80}"
-                        HeightRequest="80"
+                        HeightRequest="70"
                         StrokeThickness="0"
-                        WidthRequest="120">
-                        <Border.Shadow>
-                            <Shadow Opacity="0.1" />
-                        </Border.Shadow>
-                        <VerticalStackLayout VerticalOptions="Center">
+                        WidthRequest="100">
+
+                        <VerticalStackLayout Spacing="0" VerticalOptions="Start">
+                            <Border
+                                Stroke="{StaticResource SecondaryAccent50}"
+                                StrokeThickness="1"
+                                WidthRequest="50" />
+                            <Label
+                                Margin="0,15,0,0"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                Text="Lowest subs"
+                                TextColor="{StaticResource Gray40}" />
                             <Label
                                 FontAttributes="Bold"
                                 HorizontalOptions="Center"
-                                Text="Active subs"
-                                TextColor="{StaticResource Gray50}" />
-                            <Label
-                                HorizontalOptions="Center"
-                                Text="12"
+                                Text="$5.99"
                                 TextColor="White" />
                         </VerticalStackLayout>
                     </Border>
@@ -123,42 +139,43 @@
         <Border
             Grid.Row="1"
             Margin="20,0"
-            BackgroundColor="Black"
-            HeightRequest="60"
+            BackgroundColor="{StaticResource Gray100}"
+            HeightRequest="50"
             StrokeThickness="0">
             <HorizontalStackLayout
                 HorizontalOptions="Center"
                 Spacing="20"
                 VerticalOptions="CenterAndExpand">
                 <Button
-                    BackgroundColor="{StaticResource Gray60}"
+                    BackgroundColor="{StaticResource Gray80}"
                     CornerRadius="20"
                     Text="Your subscriptions"
                     TextColor="White"
                     WidthRequest="150" />
                 <Button
-                    BackgroundColor="Black"
+                    BackgroundColor="{StaticResource Gray100}"
                     CornerRadius="20"
                     Text="Upcoming bills"
+                    TextColor="{StaticResource Gray30}"
                     WidthRequest="150" />
             </HorizontalStackLayout>
         </Border>
 
 
         <Grid Grid.Row="2" Margin="20,0">
-            <VerticalStackLayout Spacing="20">
-                <Border>
+            <VerticalStackLayout Spacing="5">
+                <Border Stroke="{StaticResource Gray70}" StrokeThickness="1">
                     <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="30" />
+                        <RoundRectangle CornerRadius="20" />
                     </Border.StrokeShape>
-                    <Grid Padding="20" ColumnDefinitions="*,*">
+                    <Grid Padding="15" ColumnDefinitions="*,*">
                         <HorizontalStackLayout Spacing="20">
                             <Image
-                                HeightRequest="60"
+                                HeightRequest="40"
                                 Source="spotify_logo.png"
-                                WidthRequest="60" />
+                                WidthRequest="40" />
                             <Label
-                                FontSize="Large"
+                                FontSize="Medium"
                                 Text="Spotify"
                                 TextColor="White"
                                 VerticalOptions="Center" />
@@ -166,61 +183,61 @@
 
                         <Label
                             Grid.Column="1"
-                            FontSize="Large"
+                            FontSize="Medium"
                             HorizontalTextAlignment="End"
                             Text="$5.99"
                             TextColor="White"
                             VerticalOptions="Center" />
                     </Grid>
                 </Border>
-                <Border>
+                <Border Stroke="{StaticResource Gray70}" StrokeThickness="1">
                     <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="30" />
+                        <RoundRectangle CornerRadius="20" />
                     </Border.StrokeShape>
-                    <Grid Padding="20" ColumnDefinitions="*,*">
+                    <Grid Padding="15" ColumnDefinitions="*,*">
                         <HorizontalStackLayout Spacing="20">
                             <Image
-                                HeightRequest="60"
+                                HeightRequest="40"
                                 Source="youtube_logo.png"
-                                WidthRequest="60" />
+                                WidthRequest="40" />
                             <Label
-                                FontSize="Large"
-                                Text="Youtube"
+                                FontSize="Medium"
+                                Text="YouTube Premium"
                                 TextColor="White"
                                 VerticalOptions="Center" />
                         </HorizontalStackLayout>
 
                         <Label
                             Grid.Column="1"
-                            FontSize="Large"
+                            FontSize="Medium"
                             HorizontalTextAlignment="End"
-                            Text="$5.99"
+                            Text="$18.99"
                             TextColor="White"
                             VerticalOptions="Center" />
                     </Grid>
                 </Border>
-                <Border>
+                <Border Stroke="{StaticResource Gray70}" StrokeThickness="1">
                     <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="30" />
+                        <RoundRectangle CornerRadius="20" />
                     </Border.StrokeShape>
-                    <Grid Padding="20" ColumnDefinitions="*,*">
+                    <Grid Padding="15" ColumnDefinitions="*,*">
                         <HorizontalStackLayout Spacing="20">
                             <Image
-                                HeightRequest="60"
+                                HeightRequest="40"
                                 Source="onedrive_logo.png"
-                                WidthRequest="60" />
+                                WidthRequest="40" />
                             <Label
-                                FontSize="Large"
-                                Text="One Drive"
+                                FontSize="Medium"
+                                Text="Micorosft OneDrive"
                                 TextColor="White"
                                 VerticalOptions="Center" />
                         </HorizontalStackLayout>
 
                         <Label
                             Grid.Column="1"
-                            FontSize="Large"
+                            FontSize="Medium"
                             HorizontalTextAlignment="End"
-                            Text="$5.99"
+                            Text="$29.99"
                             TextColor="White"
                             VerticalOptions="Center" />
                     </Grid>
