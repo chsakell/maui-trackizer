@@ -52,6 +52,7 @@
 	  <None Remove="Resources\Images\apple.png" />
 	  <None Remove="Resources\Images\budgets.png" />
 	  <None Remove="Resources\Images\calendar.png" />
+	  <None Remove="Resources\Images\car.png" />
 	  <None Remove="Resources\Images\credit_cards.png" />
 	  <None Remove="Resources\Images\ellipse_inner.png" />
 	  <None Remove="Resources\Images\facebook.png" />
