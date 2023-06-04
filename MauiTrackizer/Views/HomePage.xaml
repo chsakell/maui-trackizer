@@ -148,6 +148,7 @@
             Margin="20,0"
             BackgroundColor="{StaticResource Gray100}"
             HeightRequest="50"
+            StrokeShape="{RoundRectangle CornerRadius='30'}"
             StrokeThickness="0">
             <HorizontalStackLayout
                 HorizontalOptions="Center"
@@ -168,89 +169,103 @@
             </HorizontalStackLayout>
         </Border>
 
+        <ScrollView Grid.Row="2">
+            <Grid Margin="20,0">
+                <VerticalStackLayout Spacing="5">
+                    <Border Stroke="{StaticResource Gray70}" StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Grid Padding="15" ColumnDefinitions="*,*">
+                            <HorizontalStackLayout Spacing="20">
+                                <Image
+                                    HeightRequest="40"
+                                    Source="spotify_logo.png"
+                                    WidthRequest="40" />
+                                <Label
+                                    FontSize="Medium"
+                                    Text="Spotify"
+                                    TextColor="White"
+                                    VerticalOptions="Center" />
+                            </HorizontalStackLayout>
 
-        <Grid Grid.Row="2" Margin="20,0">
-            <VerticalStackLayout Spacing="5">
-                <Border Stroke="{StaticResource Gray70}" StrokeThickness="1">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="20" />
-                    </Border.StrokeShape>
-                    <Grid Padding="15" ColumnDefinitions="*,*">
-                        <HorizontalStackLayout Spacing="20">
-                            <Image
-                                HeightRequest="40"
-                                Source="spotify_logo.png"
-                                WidthRequest="40" />
                             <Label
+                                Grid.Column="1"
                                 FontSize="Medium"
-                                Text="Spotify"
+                                HorizontalTextAlignment="End"
+                                Text="$5.99"
                                 TextColor="White"
                                 VerticalOptions="Center" />
-                        </HorizontalStackLayout>
+                        </Grid>
+                    </Border>
+                    <Border Stroke="{StaticResource Gray70}" StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Grid Padding="15" ColumnDefinitions="*,*">
+                            <HorizontalStackLayout Spacing="20">
+                                <Image
+                                    HeightRequest="40"
+                                    Source="youtube_logo.png"
+                                    WidthRequest="40" />
+                                <Label
+                                    FontSize="Medium"
+                                    Text="YouTube Premium"
+                                    TextColor="White"
+                                    VerticalOptions="Center" />
+                            </HorizontalStackLayout>
 
-                        <Label
-                            Grid.Column="1"
-                            FontSize="Medium"
-                            HorizontalTextAlignment="End"
-                            Text="$5.99"
-                            TextColor="White"
-                            VerticalOptions="Center" />
-                    </Grid>
-                </Border>
-                <Border Stroke="{StaticResource Gray70}" StrokeThickness="1">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="20" />
-                    </Border.StrokeShape>
-                    <Grid Padding="15" ColumnDefinitions="*,*">
-                        <HorizontalStackLayout Spacing="20">
-                            <Image
-                                HeightRequest="40"
-                                Source="youtube_logo.png"
-                                WidthRequest="40" />
                             <Label
+                                Grid.Column="1"
                                 FontSize="Medium"
-                                Text="YouTube Premium"
+                                HorizontalTextAlignment="End"
+                                Text="$18.99"
                                 TextColor="White"
                                 VerticalOptions="Center" />
-                        </HorizontalStackLayout>
+                        </Grid>
+                    </Border>
+                    <Border Stroke="{StaticResource Gray70}" StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Grid Padding="15" ColumnDefinitions="*,*">
+                            <HorizontalStackLayout Spacing="20">
+                                <Image
+                                    HeightRequest="40"
+                                    Source="onedrive_logo.png"
+                                    WidthRequest="40" />
+                                <Label
+                                    FontSize="Medium"
+                                    Text="Micorosft OneDrive"
+                                    TextColor="White"
+                                    VerticalOptions="Center" />
+                            </HorizontalStackLayout>
 
-                        <Label
-                            Grid.Column="1"
-                            FontSize="Medium"
-                            HorizontalTextAlignment="End"
-                            Text="$18.99"
-                            TextColor="White"
-                            VerticalOptions="Center" />
-                    </Grid>
-                </Border>
-                <Border Stroke="{StaticResource Gray70}" StrokeThickness="1">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="20" />
-                    </Border.StrokeShape>
-                    <Grid Padding="15" ColumnDefinitions="*,*">
-                        <HorizontalStackLayout Spacing="20">
-                            <Image
-                                HeightRequest="40"
-                                Source="onedrive_logo.png"
-                                WidthRequest="40" />
                             <Label
+                                Grid.Column="1"
                                 FontSize="Medium"
-                                Text="Micorosft OneDrive"
+                                HorizontalTextAlignment="End"
+                                Text="$29.99"
                                 TextColor="White"
                                 VerticalOptions="Center" />
-                        </HorizontalStackLayout>
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
 
-                        <Label
-                            Grid.Column="1"
-                            FontSize="Medium"
-                            HorizontalTextAlignment="End"
-                            Text="$29.99"
-                            TextColor="White"
-                            VerticalOptions="Center" />
-                    </Grid>
-                </Border>
-            </VerticalStackLayout>
-
-        </Grid>
+            </Grid>
+        </ScrollView>
+        <AbsoluteLayout
+            Grid.Row="3"
+            Margin="-10"
+            ZIndex="45">
+            <Button
+                AbsoluteLayout.LayoutBounds=".95,.95,80,80"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                BackgroundColor="{StaticResource PrimaryAccent100}"
+                CornerRadius="50"
+                HeightRequest="50"
+                Text="+"
+                WidthRequest="50" />
+        </AbsoluteLayout>
     </Grid>
 </ContentPage>

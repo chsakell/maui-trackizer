@@ -5,9 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiTrackizer"
     xmlns:views="clr-namespace:MauiTrackizer.Views"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.FlyoutBehavior="Disabled"
+    ZIndex="1">
     <TabBar
-        Shell.BackgroundColor="{StaticResource Gray80}"
         Shell.TabBarBackgroundColor="{StaticResource Gray70}"
         Shell.TabBarTitleColor="White"
         Shell.TabBarUnselectedColor="{StaticResource Gray50}">
