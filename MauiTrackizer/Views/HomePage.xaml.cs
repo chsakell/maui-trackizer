@@ -23,8 +23,8 @@ public class HomeViewModel
 
         DegreesGaugePieSeries = new GaugeBuilder()
         //.WithLabelsSize(50)
-        .WithInnerRadius(250)
-        .WithBackgroundInnerRadius(250)
+        .WithInnerRadius(280)
+        .WithBackgroundInnerRadius(280)
         .WithBackground(null)
         .WithLabelsSize(0)
         .WithLabelsPosition(PolarLabelsPosition.ChartCenter)
