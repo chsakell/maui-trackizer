@@ -28,6 +28,10 @@
                     MaxAngle="270"
                     Series="{Binding DegreesGaugePieSeries}"
                     Total="100" />
+                <Image
+                    Margin="30"
+                    Aspect="AspectFit"
+                    Source="ellipse_inner.png" />
                 <VerticalStackLayout Spacing="15" VerticalOptions="End">
                     <Image
                         Margin="0,40,0,0"
@@ -161,7 +165,6 @@
                     TextColor="White"
                     WidthRequest="150" />
                 <Button
-                    BackgroundColor="{StaticResource Gray100}"
                     CornerRadius="20"
                     Text="Upcoming bills"
                     TextColor="{StaticResource Gray30}"
@@ -258,6 +261,11 @@
             Grid.Row="3"
             Margin="-10"
             ZIndex="45">
+            <lvc:PieChart
+                InitialRotation="-225"
+                MaxAngle="270"
+                Series="{Binding DegreesGaugePieSeries}"
+                Total="100" />
             <Button
                 AbsoluteLayout.LayoutBounds=".95,.95,80,80"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
