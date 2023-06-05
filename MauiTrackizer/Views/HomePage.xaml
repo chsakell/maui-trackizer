@@ -261,11 +261,6 @@
             Grid.Row="3"
             Margin="-10"
             ZIndex="45">
-            <lvc:PieChart
-                InitialRotation="-225"
-                MaxAngle="270"
-                Series="{Binding DegreesGaugePieSeries}"
-                Total="100" />
             <Button
                 AbsoluteLayout.LayoutBounds=".95,.95,80,80"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
