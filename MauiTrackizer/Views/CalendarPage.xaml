@@ -1,12 +1,70 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiTrackizer.Views.CalendarPage"
-             Title="CalendarPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    x:Class="MauiTrackizer.Views.CalendarPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CalendarPage"
+    BackgroundColor="{StaticResource Gray80}"
+    Shell.BackgroundColor="{StaticResource Gray80}">
+    <Shell.TitleView>
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Fill">
+            <Label
+                FontSize="Medium"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="Calendar"
+                TextColor="{StaticResource Gray30}"
+                VerticalOptions="CenterAndExpand"
+                VerticalTextAlignment="Center" />
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+    <Grid RowDefinitions="Auto, 40, *">
+        <Border
+            Margin="-2"
+            Stroke="#d0d7de"
+            StrokeThickness="0">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Offset="0.2" Color="{StaticResource Gray70}" />
+                    <GradientStop Offset="1.0" Color="{StaticResource Gray100}" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="0,0,30,30" />
+            </Border.StrokeShape>
+            <VerticalStackLayout Margin="20" Spacing="10">
+                <VerticalStackLayout>
+                    <Label
+                        FontSize="30"
+                        Text="Subs"
+                        TextColor="White" />
+                    <Label
+                        FontSize="30"
+                        Text="Schedule"
+                        TextColor="White" />
+                </VerticalStackLayout>
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Small"
+                        Text="3 subscriptions for today"
+                        TextColor="{StaticResource Gray30}"
+                        VerticalOptions="Center" />
+                    <Button
+                        BackgroundColor="{StaticResource Gray70}"
+                        CornerRadius="20"
+                        Text="January" />
+                </FlexLayout>
+                <CollectionView ItemsSource="{Binding Days}">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate />
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
 </ContentPage>
