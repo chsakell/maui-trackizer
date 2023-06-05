@@ -165,6 +165,7 @@
                     TextColor="White"
                     WidthRequest="150" />
                 <Button
+                    BackgroundColor="Transparent"
                     CornerRadius="20"
                     Text="Upcoming bills"
                     TextColor="{StaticResource Gray30}"
