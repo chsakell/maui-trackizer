@@ -19,7 +19,7 @@
                 VerticalTextAlignment="Center" />
         </HorizontalStackLayout>
     </Shell.TitleView>
-    <Grid RowDefinitions="Auto, 40, *">
+    <Grid RowDefinitions="Auto, 100, *">
         <Border
             Margin="-2"
             Stroke="#d0d7de"
@@ -33,13 +33,15 @@
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="0,0,30,30" />
             </Border.StrokeShape>
-            <VerticalStackLayout Margin="20" Spacing="10">
+            <VerticalStackLayout Margin="20" Spacing="20">
                 <VerticalStackLayout>
                     <Label
+                        FontAttributes="Bold"
                         FontSize="30"
                         Text="Subs"
                         TextColor="White" />
                     <Label
+                        FontAttributes="Bold"
                         FontSize="30"
                         Text="Schedule"
                         TextColor="White" />
@@ -61,10 +63,98 @@
                         <LinearItemsLayout Orientation="Horizontal" />
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
-                        <DataTemplate />
+                        <DataTemplate>
+                            <Border
+                                Margin="5,0"
+                                HeightRequest="100"
+                                WidthRequest="55">
+                                <VerticalStackLayout>
+                                    <Label
+                                        Margin="0,10,0,0"
+                                        FontAttributes="Bold"
+                                        FontSize="Large"
+                                        HorizontalOptions="Center"
+                                        Text="{Binding Date}"
+                                        TextColor="White" />
+                                    <Label
+                                        HorizontalOptions="Center"
+                                        Text="{Binding Day}"
+                                        TextColor="{StaticResource Gray30}" />
+                                </VerticalStackLayout>
+                            </Border>
+                        </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </VerticalStackLayout>
         </Border>
+        <Grid
+            Grid.Row="1"
+            Margin="20"
+            ColumnDefinitions="*,*"
+            RowDefinitions="*,*">
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="January"
+                TextColor="White" />
+            <Label
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="End"
+                Text="$24.98"
+                TextColor="White" />
+            <Label
+                Grid.Row="1"
+                FontSize="Small"
+                Text="01.08.2023"
+                TextColor="{StaticResource Gray30}" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="1"
+                FontSize="Small"
+                HorizontalOptions="End"
+                Text="in upcoming bills"
+                TextColor="{StaticResource Gray30}" />
+        </Grid>
+        <CollectionView
+            Grid.Row="2"
+            Margin="20,0,5,0"
+            ItemsLayout="VerticalGrid, 2"
+            ItemsSource="{Binding Subscriptions}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        Margin="0,0,10,10"
+                        Padding="20"
+                        HeightRequest="150">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1">
+                                <GradientStop Offset="0.2" Color="{StaticResource Gray70}" />
+                                <GradientStop Offset="1.0" Color="{StaticResource Gray100}" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Grid RowDefinitions="*,*">
+                            <Image
+                                HorizontalOptions="Start"
+                                Source="{Binding Icon}"
+                                VerticalOptions="Start"
+                                WidthRequest="40" />
+                            <VerticalStackLayout Grid.Row="1" VerticalOptions="End">
+                                <Label
+                                    FontAttributes="Bold"
+                                    Text="{Binding Name}"
+                                    TextColor="White" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    Text="{Binding Cost}"
+                                    TextColor="White" />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Border>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid>
 </ContentPage>
