@@ -1,12 +1,88 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiTrackizer.Views.CreditCardsPage"
-             Title="CreditCardsPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    x:Class="MauiTrackizer.Views.CreditCardsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{StaticResource Gray80}"
+    Shell.BackgroundColor="{StaticResource Gray80}">
+    <Shell.TitleView>
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Fill">
+            <Label
+                FontSize="Medium"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="Credit Cards"
+                TextColor="{StaticResource Gray30}"
+                VerticalOptions="CenterAndExpand"
+                VerticalTextAlignment="Center" />
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+    <Grid RowDefinitions=".6*,.3*,.2*">
+        <CarouselView ItemsSource="{Binding Cards}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding Icon}" />
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <Grid
+            Grid.Row="1"
+            Margin="0,0,0,20"
+            RowDefinitions="*,*">
+            <Label
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="Subscriptions"
+                TextColor="White"
+                VerticalOptions="End" />
+            <HorizontalStackLayout
+                Grid.Row="1"
+                HorizontalOptions="Center"
+                Spacing="10">
+                <Image Source="spotify_logo.png" WidthRequest="40" />
+                <Image Source="youtube_logo.png" WidthRequest="40" />
+                <Image Source="onedrive_logo.png" WidthRequest="40" />
+                <Image Source="netflix_logo.png" WidthRequest="40" />
+            </HorizontalStackLayout>
+        </Grid>
+        <Border
+            Grid.Row="2"
+            BackgroundColor="{StaticResource Gray70}"
+            Stroke="#d0d7de"
+            StrokeThickness="0">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="30,30,0,0" />
+            </Border.StrokeShape>
+            <Border
+                Padding="5"
+                BackgroundColor="{StaticResource Gray70}"
+                HeightRequest="70"
+                StrokeDashArray="4,4"
+                StrokeDashOffset="1"
+                StrokeThickness="1"
+                WidthRequest="290">
+
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        Text="Add new card"
+                        TextColor="{StaticResource Gray30}"
+                        VerticalOptions="Center" />
+                    <Button
+                        BackgroundColor="Transparent"
+                        BorderColor="{StaticResource Gray30}"
+                        BorderWidth="1"
+                        CornerRadius="40"
+                        FontSize="14"
+                        HeightRequest="40"
+                        Text="+"
+                        TextColor="{StaticResource Gray30}"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+                </HorizontalStackLayout>
+            </Border>
+        </Border>
+    </Grid>
 </ContentPage>

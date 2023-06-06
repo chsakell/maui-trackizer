@@ -8,7 +8,7 @@
     Shell.FlyoutBehavior="Disabled"
     ZIndex="1">
     <TabBar
-        Shell.TabBarBackgroundColor="{StaticResource Gray70}"
+        Shell.TabBarBackgroundColor="{StaticResource Gray60}"
         Shell.TabBarTitleColor="White"
         Shell.TabBarUnselectedColor="{StaticResource Gray50}">
         <Tab Title="Home" Icon="home.png">
