@@ -266,6 +266,7 @@
                 AbsoluteLayout.LayoutBounds=".95,.95,80,80"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
                 BackgroundColor="{StaticResource PrimaryAccent100}"
+                Clicked="Button_Clicked"
                 CornerRadius="50"
                 HeightRequest="50"
                 Text="+"

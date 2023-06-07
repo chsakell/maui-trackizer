@@ -62,6 +62,7 @@
 	  <None Remove="Resources\Images\facebook.png" />
 	  <None Remove="Resources\Images\fingerprint.png" />
 	  <None Remove="Resources\Images\google.png" />
+	  <None Remove="Resources\Images\hbo_logo.png" />
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\logo.svg" />
 	  <None Remove="Resources\Images\netflix_logo.png" />
@@ -86,6 +87,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Controls\Popups\BasePopupPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\AddSubscriptionPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

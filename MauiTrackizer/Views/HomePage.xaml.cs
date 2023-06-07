@@ -3,6 +3,7 @@ using LiveChartsCore.SkiaSharpView.Painting;
 using LiveChartsCore.SkiaSharpView;
 using SkiaSharp;
 using LiveChartsCore;
+using MauiTrackizer.Controls;
 
 namespace MauiTrackizer.Views;
 
@@ -14,6 +15,11 @@ public partial class HomePage : ContentPage
 
 		BindingContext = new HomeViewModel();
 	}
+
+    private async void Button_Clicked(object sender, EventArgs e)
+    {
+        await PopupAction.DisplayPopup(new AddSubscriptionPage());
+    }
 }
 
 public class HomeViewModel
