@@ -22,14 +22,9 @@
     <Grid RowDefinitions="Auto, 100, *">
         <Border
             Margin="-2"
+            BackgroundColor="{StaticResource Gray75}"
             Stroke="#d0d7de"
             StrokeThickness="0">
-            <Border.Background>
-                <LinearGradientBrush EndPoint="0,1">
-                    <GradientStop Offset="0.2" Color="{StaticResource Gray70}" />
-                    <GradientStop Offset="1.0" Color="{StaticResource Gray100}" />
-                </LinearGradientBrush>
-            </Border.Background>
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="0,0,30,30" />
             </Border.StrokeShape>
@@ -66,7 +61,9 @@
                         <DataTemplate>
                             <Border
                                 Margin="5,0"
+                                BackgroundColor="{StaticResource Gray63}"
                                 HeightRequest="100"
+                                StrokeThickness="0"
                                 WidthRequest="55">
                                 <VerticalStackLayout>
                                     <Label
@@ -127,13 +124,9 @@
                     <Border
                         Margin="0,0,10,10"
                         Padding="20"
-                        HeightRequest="150">
-                        <Border.Background>
-                            <LinearGradientBrush EndPoint="0,1">
-                                <GradientStop Offset="0.2" Color="{StaticResource Gray70}" />
-                                <GradientStop Offset="1.0" Color="{StaticResource Gray100}" />
-                            </LinearGradientBrush>
-                        </Border.Background>
+                        BackgroundColor="{StaticResource Gray77}"
+                        HeightRequest="150"
+                        StrokeThickness="0">
                         <Grid RowDefinitions="*,*">
                             <Image
                                 HorizontalOptions="Start"

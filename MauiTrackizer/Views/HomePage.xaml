@@ -11,14 +11,9 @@
 
         <Border
             Margin="-2"
+            BackgroundColor="{StaticResource Gray75}"
             Stroke="#d0d7de"
             StrokeThickness="0">
-            <Border.Background>
-                <LinearGradientBrush EndPoint="0,1">
-                    <GradientStop Offset="0.2" Color="{StaticResource Gray70}" />
-                    <GradientStop Offset="1.0" Color="{StaticResource Gray100}" />
-                </LinearGradientBrush>
-            </Border.Background>
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="0,0,30,30" />
             </Border.StrokeShape>
@@ -73,7 +68,7 @@
                     JustifyContent="SpaceEvenly"
                     VerticalOptions="End">
                     <Border
-                        BackgroundColor="{StaticResource Gray80}"
+                        BackgroundColor="{StaticResource Gray65}"
                         HeightRequest="70"
                         StrokeThickness="0"
                         WidthRequest="100">
@@ -96,7 +91,7 @@
                         </VerticalStackLayout>
                     </Border>
                     <Border
-                        BackgroundColor="{StaticResource Gray80}"
+                        BackgroundColor="{StaticResource Gray65}"
                         HeightRequest="70"
                         StrokeThickness="0"
                         WidthRequest="100">
@@ -120,7 +115,7 @@
                         </VerticalStackLayout>
                     </Border>
                     <Border
-                        BackgroundColor="{StaticResource Gray80}"
+                        BackgroundColor="{StaticResource Gray65}"
                         HeightRequest="70"
                         StrokeThickness="0"
                         WidthRequest="100">

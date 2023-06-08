@@ -48,7 +48,7 @@
         </Grid>
         <Border
             Grid.Row="2"
-            BackgroundColor="{StaticResource Gray70}"
+            BackgroundColor="{StaticResource Gray75}"
             Stroke="#d0d7de"
             StrokeThickness="0">
             <Border.StrokeShape>
@@ -56,7 +56,7 @@
             </Border.StrokeShape>
             <Border
                 Padding="5"
-                BackgroundColor="{StaticResource Gray70}"
+                BackgroundColor="{StaticResource Gray75}"
                 HeightRequest="70"
                 StrokeDashArray="4,4"
                 StrokeDashOffset="1"

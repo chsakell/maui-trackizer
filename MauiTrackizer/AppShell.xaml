@@ -8,9 +8,9 @@
     Shell.FlyoutBehavior="Disabled"
     ZIndex="1">
     <TabBar
-        Shell.TabBarBackgroundColor="{StaticResource Gray60}"
+        Shell.TabBarBackgroundColor="{StaticResource Gray62}"
         Shell.TabBarTitleColor="White"
-        Shell.TabBarUnselectedColor="{StaticResource Gray50}">
+        Shell.TabBarUnselectedColor="{StaticResource Gray30}">
         <Tab Title="Home" Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
         </Tab>

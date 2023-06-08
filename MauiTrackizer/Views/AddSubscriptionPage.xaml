@@ -9,10 +9,10 @@
     ForegroundColor="Transparent"
     HorizontalOptions="Fill"
     VerticalOptions="FillAndExpand">
-    <Grid BackgroundColor="{StaticResource Gray80}" RowDefinitions="*,*">
+    <Grid BackgroundColor="{StaticResource Gray80}" RowDefinitions=".6*,.4*">
         <Border
             Margin="0,-10,0,0"
-            BackgroundColor="{StaticResource Gray70}"
+            BackgroundColor="{StaticResource Gray75}"
             StrokeThickness="0">
             <Grid RowDefinitions="*,*" RowSpacing="10">
 
@@ -92,7 +92,7 @@
                 HeightRequest="50"
                 JustifyContent="SpaceBetween">
                 <Button
-                    BackgroundColor="{StaticResource Gray70}"
+                    BackgroundColor="{StaticResource Gray77}"
                     CornerRadius="10"
                     HeightRequest="40"
                     HorizontalOptions="Center"
@@ -111,7 +111,7 @@
                     <Border StrokeThickness=".8" WidthRequest="150" />
                 </VerticalStackLayout>
                 <Button
-                    BackgroundColor="{StaticResource Gray70}"
+                    BackgroundColor="{StaticResource Gray77}"
                     CornerRadius="10"
                     HeightRequest="40"
                     Text="+"
