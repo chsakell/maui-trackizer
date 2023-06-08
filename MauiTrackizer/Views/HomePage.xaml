@@ -175,6 +175,9 @@
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="20" />
                         </Border.StrokeShape>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer CommandParameter="spotify" Tapped="TapGestureRecognizer_Tapped" />
+                        </Border.GestureRecognizers>
                         <Grid Padding="15" ColumnDefinitions="*,*">
                             <HorizontalStackLayout Spacing="20">
                                 <Image
@@ -201,6 +204,9 @@
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="20" />
                         </Border.StrokeShape>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer CommandParameter="youtube" Tapped="TapGestureRecognizer_Tapped" />
+                        </Border.GestureRecognizers>
                         <Grid Padding="15" ColumnDefinitions="*,*">
                             <HorizontalStackLayout Spacing="20">
                                 <Image
@@ -227,6 +233,9 @@
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="20" />
                         </Border.StrokeShape>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer CommandParameter="onedrive" Tapped="TapGestureRecognizer_Tapped" />
+                        </Border.GestureRecognizers>
                         <Grid Padding="15" ColumnDefinitions="*,*">
                             <HorizontalStackLayout Spacing="20">
                                 <Image

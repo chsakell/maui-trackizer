@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\apple.png" />
+	  <None Remove="Resources\Images\arrow_down.png" />
 	  <None Remove="Resources\Images\budgets.png" />
 	  <None Remove="Resources\Images\calendar.png" />
 	  <None Remove="Resources\Images\car.png" />
@@ -69,6 +70,7 @@
 	  <None Remove="Resources\Images\ok.png" />
 	  <None Remove="Resources\Images\onedrive_logo.png" />
 	  <None Remove="Resources\Images\spotify_logo.png" />
+	  <None Remove="Resources\Images\trash.png" />
 	  <None Remove="Resources\Images\welcome_abstract.png" />
 	  <None Remove="Resources\Images\welcome_glow.png" />
 	  <None Remove="Resources\Images\welcome_services.png" />

@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiTrackizer.Views.SubscriptionInfoPage"
-             Title="SubscriptionInfoPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentPage>
+<controls:BasePopupPage
+    x:Class="MauiTrackizer.Views.SubscriptionInfoPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MauiTrackizer.Controls"
+    xmlns:handlers="clr-namespace:MauiTrackizer.Handlers"
+    Title="SubscriptionInfoPage"
+    Margin="20"
+    ForegroundColor="Transparent"
+    HorizontalOptions="Fill"
+    VerticalOptions="FillAndExpand">
+    <Grid BackgroundColor="{StaticResource Gray80}" RowDefinitions=".4*,.6*">
+        <Border BackgroundColor="{StaticResource Gray70}">
+            <Grid RowDefinitions="30,*">
+                <Grid Margin="20" ColumnDefinitions="40,*,40">
+                    <Image HeightRequest="20" Source="arrow_down.png" />
+                    <Label
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        Text="Subscription info"
+                        TextColor="{StaticResource Gray30}" />
+                    <Image
+                        Grid.Column="2"
+                        HeightRequest="20"
+                        HorizontalOptions="End"
+                        Source="trash.png" />
+                </Grid>
+                <VerticalStackLayout
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Spacing="10"
+                    VerticalOptions="Center">
+                    <Image HeightRequest="100" Source="{Binding SubscriptionInfo.Icon}" />
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalOptions="Center"
+                        Text="{Binding SubscriptionInfo.Name}"
+                        TextColor="White" />
+                    <Label
+                        HorizontalOptions="Center"
+                        Text="{Binding SubscriptionInfo.Cost}"
+                        TextColor="{StaticResource Gray30}" />
+                </VerticalStackLayout>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" BackgroundColor="{StaticResource Gray75}" />
+    </Grid>
+</controls:BasePopupPage>
