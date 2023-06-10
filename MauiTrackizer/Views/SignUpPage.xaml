@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:handlers="clr-namespace:MauiTrackizer.Handlers"
-    Title="SignUpPage"
+    Title="Sign Up"
     BackgroundColor="{StaticResource Gray80}">
     <Grid RowDefinitions="*,  Auto">
         <VerticalStackLayout>
@@ -75,6 +75,7 @@
 
             <Button
                 BackgroundColor="{StaticResource PrimaryAccent100}"
+                Clicked="SignInButton_Clicked"
                 CornerRadius="50"
                 FontSize="Medium"
                 Text="Get started, it's free!" />
@@ -93,7 +94,9 @@
                     Text="Do you have already an account?"
                     TextColor="White" />
                 <Button
+                    x:Name="SignInButton"
                     BackgroundColor="{StaticResource Gray70}"
+                    Clicked="SignInButton_Clicked"
                     CornerRadius="30"
                     FontAttributes="Bold"
                     FontSize="Medium"

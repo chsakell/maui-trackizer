@@ -4,7 +4,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="SignUpOptionsPage"
-    BackgroundColor="{StaticResource Gray80}">
+    BackgroundColor="{StaticResource Gray80}"
+    NavigationPage.HasNavigationBar="False">
     <Grid RowDefinitions="*,  Auto">
 
         <VerticalStackLayout>
@@ -42,7 +43,7 @@
             </VerticalStackLayout>
 
             <Label
-                FontSize="Small"
+                FontSize="Medium"
                 HorizontalTextAlignment="Center"
                 Text="or"
                 TextColor="{StaticResource White}" />
@@ -51,6 +52,8 @@
             <VerticalStackLayout HorizontalOptions="Fill" Spacing="15">
 
                 <Button
+                    x:Name="SignUpWithEmail"
+                    Clicked="SignUpWithEmail_Clicked"
                     BackgroundColor="{StaticResource Gray70}"
                     CornerRadius="30"
                     FontAttributes="Bold"

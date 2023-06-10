@@ -4,7 +4,9 @@ using Microsoft.UI.Windowing;
 using Windows.Graphics;
 #endif
 
+using MauiTrackizer.Core;
 using MauiTrackizer.Handlers;
+using MauiTrackizer.Views;
 
 namespace MauiTrackizer;
 
@@ -37,8 +39,19 @@ public partial class App : Application
 #if WINDOWS
         SetWindowsSize();
 #endif
-
-        MainPage = new AppShell();
+        if (AppSettings.IsFirstLaunching)
+        {
+            AppSettings.IsFirstLaunching = true; //Set to 'false' in production
+            MainPage = new NavigationPage(new WelcomePage())
+            {
+                BarBackgroundColor = Color.FromRgb(28, 28, 35),
+                BarTextColor = Color.FromRgb(162, 162, 181)
+            };
+        }
+        else
+        {
+            MainPage = new AppShell();
+        }
 	}
 
 	private void SetWindowsSize()

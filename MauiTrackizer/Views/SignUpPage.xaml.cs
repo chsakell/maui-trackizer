@@ -6,4 +6,9 @@ public partial class SignUpPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void SignInButton_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new LoginPage());
+    }
 }

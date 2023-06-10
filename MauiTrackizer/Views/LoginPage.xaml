@@ -5,7 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:handlers="clr-namespace:MauiTrackizer.Handlers"
     Title="LoginPage"
-    BackgroundColor="{StaticResource Gray80}">
+    BackgroundColor="{StaticResource Gray80}"
+    NavigationPage.HasNavigationBar="False">
     <Grid RowDefinitions="*,  Auto">
         <VerticalStackLayout>
             <Image
@@ -86,6 +87,7 @@
                 BackgroundColor="{StaticResource PrimaryAccent100}"
                 CornerRadius="50"
                 FontSize="Medium"
+                Clicked="Button_Clicked"
                 Text="Sign In" />
 
             <Label
@@ -102,6 +104,7 @@
                     Text="You don't have an account yet?"
                     TextColor="White" />
                 <Button
+                    Clicked="Button_Clicked"
                     BackgroundColor="{StaticResource Gray70}"
                     CornerRadius="30"
                     FontAttributes="Bold"

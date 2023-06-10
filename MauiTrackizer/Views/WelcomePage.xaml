@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="WelcomePage"
     BackgroundColor="{StaticResource Gray80}"
-    Shell.NavBarIsVisible="False">
+    NavigationPage.HasNavigationBar="False">
     <Grid RowDefinitions="*, 100, Auto">
 
         <AbsoluteLayout>
@@ -48,14 +48,18 @@
             VerticalOptions="End">
 
             <Button
+                x:Name="GetStartedButton"
                 BackgroundColor="{StaticResource PrimaryAccent100}"
+                Clicked="GetStartedButton_Clicked"
                 CornerRadius="30"
                 FontAttributes="Bold"
                 FontSize="Medium"
                 HeightRequest="50"
                 Text="Get started" />
             <Button
-                BackgroundColor="{StaticResource Gray70}"
+                x:Name="AccountButton"
+                BackgroundColor="{StaticResource Gray66}"
+                Clicked="AccountButton_Clicked"
                 CornerRadius="30"
                 FontAttributes="Bold"
                 FontSize="Medium"
