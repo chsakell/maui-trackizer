@@ -3,11 +3,21 @@
     x:Class="MauiTrackizer.Views.SettingsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Settings"
     BackgroundColor="{StaticResource Gray80}"
     Shell.BackgroundColor="{StaticResource Gray80}"
-    Shell.NavBarIsVisible="True"
-    Shell.TitleColor="{StaticResource Gray30}">
+    Shell.NavBarIsVisible="True">
+    <Shell.TitleView>
+        <HorizontalStackLayout VerticalOptions="Fill">
+            <Label
+                FontSize="Medium"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="Settings"
+                TextColor="{StaticResource Gray30}"
+                VerticalTextAlignment="Center" />
+        </HorizontalStackLayout>
+    </Shell.TitleView>
     <Grid Margin="20" RowDefinitions="Auto, *">
         <VerticalStackLayout Spacing="10">
             <Image Source="avatar.png" WidthRequest="80" />
@@ -23,6 +33,7 @@
                 TextColor="{StaticResource Gray30}" />
             <Button
                 BackgroundColor="{StaticResource Gray66}"
+                Clicked="Button_Clicked"
                 CornerRadius="40"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"

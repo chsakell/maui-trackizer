@@ -8,15 +8,6 @@
     BackgroundColor="{StaticResource Gray80}"
     Shell.BackgroundColor="{StaticResource Gray80}"
     Shell.NavBarIsVisible="False">
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem
-            Clicked="ToolbarItem_Clicked"
-            IconImageSource="{StaticResource ThemeSettingIcon}"
-            Order="Primary"
-            Priority="0"
-            Text="Settings" />
-    </ContentPage.ToolbarItems>-->
-
     <Grid RowDefinitions="*,80,*">
         <Border
             Margin="-2"
