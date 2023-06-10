@@ -45,6 +45,111 @@
                 </VerticalStackLayout>
             </Grid>
         </Border>
-        <Border Grid.Row="1" BackgroundColor="{StaticResource Gray75}" />
+        <Border Grid.Row="1" BackgroundColor="{StaticResource Gray75}">
+            <Border
+                Margin="20"
+                Padding="20"
+                BackgroundColor="{StaticResource Gray65}"
+                StrokeThickness="0">
+
+                <FlexLayout Direction="Column" JustifyContent="SpaceBetween">
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        RowDefinitions="*,*,*,*,*,*"
+                        RowSpacing="20">
+                        <Label
+                            Grid.Row="0"
+                            FontSize="20"
+                            Text="Name"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            FontSize="Small"
+                            HorizontalOptions="End"
+                            Text="{Binding SubscriptionInfo.Name}"
+                            TextColor="{StaticResource Gray30}"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="1"
+                            FontSize="20"
+                            Text="Description"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            FontSize="Small"
+                            HorizontalOptions="End"
+                            Text="{Binding SubscriptionInfo.Description}"
+                            TextColor="{StaticResource Gray30}"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="2"
+                            FontSize="20"
+                            Text="Category"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            FontSize="Small"
+                            HorizontalOptions="End"
+                            Text="{Binding SubscriptionInfo.Category}"
+                            TextColor="{StaticResource Gray30}"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="3"
+                            FontSize="20"
+                            Text="First payment"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            FontSize="Small"
+                            HorizontalOptions="End"
+                            Text="{Binding SubscriptionInfo.FirstPayment}"
+                            TextColor="{StaticResource Gray30}"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="4"
+                            FontSize="20"
+                            Text="Reminder"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            FontSize="Small"
+                            HorizontalOptions="End"
+                            Text="{Binding SubscriptionInfo.Reminder}"
+                            TextColor="{StaticResource Gray30}"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="5"
+                            FontSize="20"
+                            Text="Currency"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="5"
+                            Grid.Column="1"
+                            FontSize="Small"
+                            HorizontalOptions="End"
+                            Text="{Binding SubscriptionInfo.Currency}"
+                            TextColor="{StaticResource Gray30}"
+                            VerticalOptions="Center" />
+                    </Grid>
+                    <Button
+                        BackgroundColor="{StaticResource Gray64}"
+                        CornerRadius="40"
+                        HeightRequest="40"
+                        Text="Save" />
+                </FlexLayout>
+
+            </Border>
+        </Border>
     </Grid>
 </controls:BasePopupPage>
