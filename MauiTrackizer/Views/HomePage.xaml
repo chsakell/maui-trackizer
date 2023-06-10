@@ -6,9 +6,18 @@
     xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
     Title="HomePage"
     BackgroundColor="{StaticResource Gray80}"
+    Shell.BackgroundColor="{StaticResource Gray80}"
     Shell.NavBarIsVisible="False">
-    <Grid RowDefinitions="*,80,*">
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem
+            Clicked="ToolbarItem_Clicked"
+            IconImageSource="{StaticResource ThemeSettingIcon}"
+            Order="Primary"
+            Priority="0"
+            Text="Settings" />
+    </ContentPage.ToolbarItems>-->
 
+    <Grid RowDefinitions="*,80,*">
         <Border
             Margin="-2"
             BackgroundColor="{StaticResource Gray75}"
@@ -275,6 +284,14 @@
                 HeightRequest="50"
                 Text="+"
                 WidthRequest="50" />
+        </AbsoluteLayout>
+        <AbsoluteLayout>
+            <ImageButton
+                x:Name="SettingsButton"
+                AbsoluteLayout.LayoutBounds=".95,.1,30,30"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                Clicked="SettingsButton_Clicked"
+                Source="settings.png" />
         </AbsoluteLayout>
     </Grid>
 </ContentPage>

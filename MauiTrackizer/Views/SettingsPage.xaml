@@ -1,12 +1,169 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiTrackizer.Views.SettingsPage"
-             Title="SettingsPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    x:Class="MauiTrackizer.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Settings"
+    BackgroundColor="{StaticResource Gray80}"
+    Shell.BackgroundColor="{StaticResource Gray80}"
+    Shell.NavBarIsVisible="True"
+    Shell.TitleColor="{StaticResource Gray30}">
+    <Grid Margin="20" RowDefinitions="Auto, *">
+        <VerticalStackLayout Spacing="10">
+            <Image Source="avatar.png" WidthRequest="80" />
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="John Doe"
+                TextColor="White" />
+            <Label
+                HorizontalOptions="Center"
+                Text="j.doe@gmail.com"
+                TextColor="{StaticResource Gray30}" />
+            <Button
+                BackgroundColor="{StaticResource Gray66}"
+                CornerRadius="40"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Text="Edit profile" />
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="1" Spacing="20">
+            <Grid RowDefinitions="40, Auto">
+                <Label
+                    FontSize="Medium"
+                    Text="General"
+                    TextColor="White" />
+                <Border
+                    Grid.Row="1"
+                    Padding="20"
+                    BackgroundColor="{StaticResource Gray77}"
+                    StrokeThickness="0">
+                    <Grid
+                        ColumnDefinitions=".6*,.4*"
+                        RowDefinitions="*,*"
+                        RowSpacing="20">
+                        <Image
+                            Grid.Row="0"
+                            HorizontalOptions="Start"
+                            Source="security.png"
+                            VerticalOptions="Start"
+                            WidthRequest="25" />
+                        <Label
+                            Grid.Row="0"
+                            Margin="50,0,0,0"
+                            FontSize="Medium"
+                            Text="Security"
+                            TextColor="White" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            FontSize="Small"
+                            HorizontalOptions="End"
+                            Text="FaceID &gt;"
+                            TextColor="{StaticResource Gray30}"
+                            VerticalOptions="Center" />
+                        <Image
+                            Grid.Row="1"
+                            HorizontalOptions="Start"
+                            Source="icloud.png"
+                            VerticalOptions="Start"
+                            WidthRequest="25" />
+                        <Label
+                            Grid.Row="1"
+                            Margin="50,0,0,0"
+                            FontSize="Medium"
+                            Text="Security"
+                            TextColor="White" />
+                        <Switch
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            HeightRequest="10"
+                            HorizontalOptions="End"
+                            OnColor="{StaticResource Gray60}"
+                            ThumbColor="White" />
+                    </Grid>
+
+                </Border>
+            </Grid>
+            <Grid RowDefinitions="40, Auto">
+                <Label
+                    FontSize="Medium"
+                    Text="My subscription"
+                    TextColor="White" />
+                <Border
+                    Grid.Row="1"
+                    Padding="20"
+                    BackgroundColor="{StaticResource Gray77}"
+                    StrokeThickness="0">
+                    <Grid
+                        ColumnDefinitions=".6*,.4*"
+                        RowDefinitions="*,*,*"
+                        RowSpacing="20">
+                        <Image
+                            Grid.Row="0"
+                            HorizontalOptions="Start"
+                            Source="sorting.png"
+                            VerticalOptions="Start"
+                            WidthRequest="25" />
+                        <Label
+                            Grid.Row="0"
+                            Margin="50,0,0,0"
+                            FontSize="Medium"
+                            Text="Sorting"
+                            TextColor="White" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            FontSize="Small"
+                            HorizontalOptions="End"
+                            Text="Date &gt;"
+                            TextColor="{StaticResource Gray30}"
+                            VerticalOptions="Center" />
+                        <Image
+                            Grid.Row="1"
+                            HorizontalOptions="Start"
+                            Source="chart.png"
+                            VerticalOptions="Start"
+                            WidthRequest="25" />
+                        <Label
+                            Grid.Row="1"
+                            Margin="50,0,0,0"
+                            FontSize="Medium"
+                            Text="Summary"
+                            TextColor="White" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            FontSize="Small"
+                            HorizontalOptions="End"
+                            Text="Average &gt;"
+                            TextColor="{StaticResource Gray30}"
+                            VerticalOptions="Center" />
+                        <Image
+                            Grid.Row="2"
+                            HorizontalOptions="Start"
+                            Source="money.png"
+                            VerticalOptions="Start"
+                            WidthRequest="25" />
+                        <Label
+                            Grid.Row="2"
+                            Margin="50,0,0,0"
+                            FontSize="Medium"
+                            Text="Default currency"
+                            TextColor="White" />
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            FontSize="Small"
+                            HorizontalOptions="End"
+                            Text="USD ($) &gt;"
+                            TextColor="{StaticResource Gray30}"
+                            VerticalOptions="Center" />
+                    </Grid>
+
+                </Border>
+            </Grid>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>

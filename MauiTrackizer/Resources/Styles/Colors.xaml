@@ -23,6 +23,7 @@
     <Color x:Key="Gray62">#444456</Color>
     <Color x:Key="Gray64">#3D3D47</Color>
     <Color x:Key="Gray63">#30303B</Color>
+    <Color x:Key="Gray66">#323239</Color>
     <Color x:Key="Gray65">#30303C</Color>
     <Color x:Key="Gray70">#353542</Color>
     <Color x:Key="Gray75">#282832</Color>

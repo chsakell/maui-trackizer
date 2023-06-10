@@ -13,6 +13,8 @@
         <Setter Property="StrokeThickness" Value="1" />
     </Style>
 
+    <FileImageSource x:Key="ThemeSettingIcon">settings.png</FileImageSource>
+
     <!--<Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
     </Style>
