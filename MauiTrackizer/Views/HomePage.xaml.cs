@@ -71,11 +71,6 @@ public partial class HomePage : ContentPage
     {
         await Shell.Current.GoToAsync("settings");
     }
-
-    private async void ToolbarItem_Clicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("settings");
-    }
 }
 
 public class HomeViewModel

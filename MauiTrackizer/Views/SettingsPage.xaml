@@ -3,6 +3,7 @@
     x:Class="MauiTrackizer.Views.SettingsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:constants="clr-namespace:MauiTrackizer.Constants"
     BackgroundColor="{StaticResource Gray80}"
     Shell.BackgroundColor="{StaticResource Gray80}"
     Shell.NavBarIsVisible="True">
@@ -54,12 +55,12 @@
                         ColumnDefinitions=".6*,.4*"
                         RowDefinitions="*,*"
                         RowSpacing="20">
-                        <Image
-                            Grid.Row="0"
-                            HorizontalOptions="Start"
-                            Source="security.png"
-                            VerticalOptions="Start"
-                            WidthRequest="25" />
+                        <Label
+                            FontFamily="Material"
+                            FontSize="30"
+                            Text="{Static constants:MaterialIcons.Lock_person}"
+                            TextColor="{StaticResource Gray20}"
+                            VerticalOptions="Center" />
                         <Label
                             Grid.Row="0"
                             Margin="50,0,0,0"
@@ -74,17 +75,18 @@
                             Text="FaceID &gt;"
                             TextColor="{StaticResource Gray30}"
                             VerticalOptions="Center" />
-                        <Image
+                        <Label
                             Grid.Row="1"
-                            HorizontalOptions="Start"
-                            Source="icloud.png"
-                            VerticalOptions="Start"
-                            WidthRequest="25" />
+                            FontFamily="Material"
+                            FontSize="30"
+                            Text="{Static constants:MaterialIcons.Cloud_sync}"
+                            TextColor="{StaticResource Gray20}"
+                            VerticalOptions="Center" />
                         <Label
                             Grid.Row="1"
                             Margin="50,0,0,0"
                             FontSize="Medium"
-                            Text="Security"
+                            Text="iCloud sync"
                             TextColor="White" />
                         <Switch
                             Grid.Row="1"
@@ -111,12 +113,12 @@
                         ColumnDefinitions=".6*,.4*"
                         RowDefinitions="*,*,*"
                         RowSpacing="20">
-                        <Image
-                            Grid.Row="0"
-                            HorizontalOptions="Start"
-                            Source="sorting.png"
-                            VerticalOptions="Start"
-                            WidthRequest="25" />
+                        <Label
+                            FontFamily="Material"
+                            FontSize="30"
+                            Text="{Static constants:MaterialIcons.Sort}"
+                            TextColor="{StaticResource Gray20}"
+                            VerticalOptions="Center" />
                         <Label
                             Grid.Row="0"
                             Margin="50,0,0,0"
@@ -131,12 +133,13 @@
                             Text="Date &gt;"
                             TextColor="{StaticResource Gray30}"
                             VerticalOptions="Center" />
-                        <Image
+                        <Label
                             Grid.Row="1"
-                            HorizontalOptions="Start"
-                            Source="chart.png"
-                            VerticalOptions="Start"
-                            WidthRequest="25" />
+                            FontFamily="Material"
+                            FontSize="30"
+                            Text="{Static constants:MaterialIcons.Bar_chart}"
+                            TextColor="{StaticResource Gray20}"
+                            VerticalOptions="Center" />
                         <Label
                             Grid.Row="1"
                             Margin="50,0,0,0"
@@ -151,12 +154,13 @@
                             Text="Average &gt;"
                             TextColor="{StaticResource Gray30}"
                             VerticalOptions="Center" />
-                        <Image
+                        <Label
                             Grid.Row="2"
-                            HorizontalOptions="Start"
-                            Source="money.png"
-                            VerticalOptions="Start"
-                            WidthRequest="25" />
+                            FontFamily="Material"
+                            FontSize="30"
+                            Text="{Static constants:MaterialIcons.Currency_exchange}"
+                            TextColor="{StaticResource Gray20}"
+                            VerticalOptions="Center" />
                         <Label
                             Grid.Row="2"
                             Margin="50,0,0,0"

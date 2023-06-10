@@ -3,6 +3,7 @@
     x:Class="MauiTrackizer.Views.SpendingBudgetsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:constants="clr-namespace:MauiTrackizer.Constants"
     xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
     BackgroundColor="{StaticResource Gray80}"
     Shell.BackgroundColor="{StaticResource Gray80}">
@@ -59,7 +60,12 @@
                         Text="Your budgets are on track"
                         TextColor="{StaticResource White}"
                         VerticalOptions="Center" />
-                    <Image Source="ok.png" WidthRequest="20" />
+                    <Label
+                        FontFamily="Material"
+                        FontSize="30"
+                        Text="{Static constants:MaterialIcons.Thumb_up}"
+                        TextColor="#FFDB5E"
+                        VerticalOptions="Center" />
 
                 </HorizontalStackLayout>
             </Border>
@@ -78,7 +84,11 @@
                             Grid.Row="0"
                             Grid.Column="0"
                             Spacing="20">
-                            <Image Source="car.png" WidthRequest="30" />
+                            <Label
+                                FontFamily="Material"
+                                FontSize="40"
+                                Text="{Static constants:MaterialIcons.Car_repair}"
+                                TextColor="{StaticResource Gray30}" />
                             <VerticalStackLayout
                                 Grid.Row="0"
                                 Grid.Column="1"
@@ -131,7 +141,11 @@
                             Grid.Row="0"
                             Grid.Column="0"
                             Spacing="20">
-                            <Image Source="confetti.png" WidthRequest="30" />
+                            <Label
+                                FontFamily="Material"
+                                FontSize="40"
+                                Text="{Static constants:MaterialIcons.Nightlife}"
+                                TextColor="{StaticResource Gray30}" />
                             <VerticalStackLayout
                                 Grid.Row="0"
                                 Grid.Column="1"
@@ -184,7 +198,11 @@
                             Grid.Row="0"
                             Grid.Column="0"
                             Spacing="20">
-                            <Image Source="fingerprint.png" WidthRequest="30" />
+                            <Label
+                                FontFamily="Material"
+                                FontSize="40"
+                                Text="{Static constants:MaterialIcons.Fingerprint}"
+                                TextColor="{StaticResource Gray30}" />
                             <VerticalStackLayout
                                 Grid.Row="0"
                                 Grid.Column="1"

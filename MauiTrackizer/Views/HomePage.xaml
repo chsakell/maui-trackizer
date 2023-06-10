@@ -3,6 +3,7 @@
     x:Class="MauiTrackizer.Views.HomePage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:constants="clr-namespace:MauiTrackizer.Constants"
     xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
     Title="HomePage"
     BackgroundColor="{StaticResource Gray80}"
@@ -278,11 +279,17 @@
         </AbsoluteLayout>
         <AbsoluteLayout>
             <ImageButton
-                x:Name="SettingsButton"
                 AbsoluteLayout.LayoutBounds=".95,.1,30,30"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
-                Clicked="SettingsButton_Clicked"
-                Source="settings.png" />
+                Clicked="SettingsButton_Clicked">
+                <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="Material"
+                        Glyph="{Static constants:MaterialIcons.Settings}"
+                        Size="44"
+                        Color="{StaticResource Gray30}" />
+                </ImageButton.Source>
+            </ImageButton>
         </AbsoluteLayout>
     </Grid>
 </ContentPage>

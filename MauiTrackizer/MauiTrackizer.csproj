@@ -49,33 +49,23 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\fa-brands-400.ttf" />
+	  <None Remove="Resources\Fonts\material-icons-regular.ttf" />
 	  <None Remove="Resources\Images\apple.png" />
 	  <None Remove="Resources\Images\arrow_down.png" />
 	  <None Remove="Resources\Images\avatar.png" />
-	  <None Remove="Resources\Images\budgets.png" />
-	  <None Remove="Resources\Images\calendar.png" />
-	  <None Remove="Resources\Images\car.png" />
 	  <None Remove="Resources\Images\card_1.png" />
 	  <None Remove="Resources\Images\card_2.png" />
 	  <None Remove="Resources\Images\card_3.png" />
-	  <None Remove="Resources\Images\chart.png" />
-	  <None Remove="Resources\Images\confetti.png" />
 	  <None Remove="Resources\Images\credit_cards.png" />
 	  <None Remove="Resources\Images\ellipse_inner.png" />
 	  <None Remove="Resources\Images\facebook.png" />
-	  <None Remove="Resources\Images\fingerprint.png" />
 	  <None Remove="Resources\Images\google.png" />
 	  <None Remove="Resources\Images\hbo_logo.png" />
-	  <None Remove="Resources\Images\home.png" />
-	  <None Remove="Resources\Images\iCloud.png" />
 	  <None Remove="Resources\Images\logo.svg" />
-	  <None Remove="Resources\Images\money.png" />
 	  <None Remove="Resources\Images\netflix_logo.png" />
-	  <None Remove="Resources\Images\ok.png" />
 	  <None Remove="Resources\Images\onedrive_logo.png" />
-	  <None Remove="Resources\Images\security.png" />
 	  <None Remove="Resources\Images\settings.png" />
-	  <None Remove="Resources\Images\sorting.png" />
 	  <None Remove="Resources\Images\spotify_logo.png" />
 	  <None Remove="Resources\Images\trash.png" />
 	  <None Remove="Resources\Images\welcome_abstract.png" />
