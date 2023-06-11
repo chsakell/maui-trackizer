@@ -18,8 +18,8 @@
                 VerticalTextAlignment="Center" />
         </HorizontalStackLayout>
     </Shell.TitleView>
-    <Grid RowDefinitions=".6*,.3*,.2*">
-        <CarouselView ItemsSource="{Binding Cards}">
+    <Grid RowDefinitions=".7*,.2*,.2*">
+        <CarouselView Margin="0,20" ItemsSource="{Binding Cards}">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <Image Source="{Binding Icon}" />
@@ -28,7 +28,7 @@
         </CarouselView>
         <Grid
             Grid.Row="1"
-            Margin="0,0,0,20"
+            Margin="0,-40,0,20"
             RowDefinitions="*,*">
             <Label
                 FontSize="Large"

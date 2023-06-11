@@ -67,14 +67,32 @@
                             FontSize="Medium"
                             Text="Security"
                             TextColor="White" />
-                        <Label
+                        <HorizontalStackLayout
                             Grid.Row="0"
                             Grid.Column="1"
-                            FontSize="Small"
-                            HorizontalOptions="End"
-                            Text="FaceID &gt;"
-                            TextColor="{StaticResource Gray30}"
-                            VerticalOptions="Center" />
+                            HorizontalOptions="End">
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                FontSize="Small"
+                                Text="FaceID"
+                                TextColor="{StaticResource Gray30}"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                HorizontalOptions="End"
+                                VerticalOptions="Center">
+                                <ImageButton.Source>
+                                    <FontImageSource
+                                        FontFamily="Material"
+                                        Glyph="{Static constants:MaterialIcons.Chevron_right}"
+                                        Size="20"
+                                        Color="{StaticResource Gray30}" />
+                                </ImageButton.Source>
+                            </ImageButton>
+                        </HorizontalStackLayout>
+
                         <Label
                             Grid.Row="1"
                             FontFamily="Material"
@@ -125,14 +143,25 @@
                             FontSize="Medium"
                             Text="Sorting"
                             TextColor="White" />
-                        <Label
+                        <HorizontalStackLayout
                             Grid.Row="0"
                             Grid.Column="1"
-                            FontSize="Small"
-                            HorizontalOptions="End"
-                            Text="Date &gt;"
-                            TextColor="{StaticResource Gray30}"
-                            VerticalOptions="Center" />
+                            HorizontalOptions="End">
+                            <Label
+                                FontSize="Small"
+                                Text="Date"
+                                TextColor="{StaticResource Gray30}"
+                                VerticalOptions="Center" />
+                            <ImageButton HorizontalOptions="End" VerticalOptions="Center">
+                                <ImageButton.Source>
+                                    <FontImageSource
+                                        FontFamily="Material"
+                                        Glyph="{Static constants:MaterialIcons.Chevron_right}"
+                                        Size="20"
+                                        Color="{StaticResource Gray30}" />
+                                </ImageButton.Source>
+                            </ImageButton>
+                        </HorizontalStackLayout>
                         <Label
                             Grid.Row="1"
                             FontFamily="Material"
@@ -146,14 +175,25 @@
                             FontSize="Medium"
                             Text="Summary"
                             TextColor="White" />
-                        <Label
+                        <HorizontalStackLayout
                             Grid.Row="1"
                             Grid.Column="1"
-                            FontSize="Small"
-                            HorizontalOptions="End"
-                            Text="Average &gt;"
-                            TextColor="{StaticResource Gray30}"
-                            VerticalOptions="Center" />
+                            HorizontalOptions="End">
+                            <Label
+                                FontSize="Small"
+                                Text="Average"
+                                TextColor="{StaticResource Gray30}"
+                                VerticalOptions="Center" />
+                            <ImageButton HorizontalOptions="End" VerticalOptions="Center">
+                                <ImageButton.Source>
+                                    <FontImageSource
+                                        FontFamily="Material"
+                                        Glyph="{Static constants:MaterialIcons.Chevron_right}"
+                                        Size="20"
+                                        Color="{StaticResource Gray30}" />
+                                </ImageButton.Source>
+                            </ImageButton>
+                        </HorizontalStackLayout>
                         <Label
                             Grid.Row="2"
                             FontFamily="Material"
@@ -167,16 +207,27 @@
                             FontSize="Medium"
                             Text="Default currency"
                             TextColor="White" />
-                        <Label
+
+                        <HorizontalStackLayout
                             Grid.Row="2"
                             Grid.Column="1"
-                            FontSize="Small"
-                            HorizontalOptions="End"
-                            Text="USD ($) &gt;"
-                            TextColor="{StaticResource Gray30}"
-                            VerticalOptions="Center" />
+                            HorizontalOptions="End">
+                            <Label
+                                FontSize="Small"
+                                Text="USD ($)"
+                                TextColor="{StaticResource Gray30}"
+                                VerticalOptions="Center" />
+                            <ImageButton HorizontalOptions="End" VerticalOptions="Center">
+                                <ImageButton.Source>
+                                    <FontImageSource
+                                        FontFamily="Material"
+                                        Glyph="{Static constants:MaterialIcons.Chevron_right}"
+                                        Size="20"
+                                        Color="{StaticResource Gray30}" />
+                                </ImageButton.Source>
+                            </ImageButton>
+                        </HorizontalStackLayout>
                     </Grid>
-
                 </Border>
             </Grid>
         </VerticalStackLayout>
