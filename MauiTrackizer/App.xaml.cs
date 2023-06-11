@@ -39,7 +39,7 @@ public partial class App : Application
 #if WINDOWS
         SetWindowsSize();
 #endif
-        if (AppSettings.IsFirstLaunching)
+        if (false)
         {
             AppSettings.IsFirstLaunching = true; //Set to 'false' in production
             MainPage = new NavigationPage(new WelcomePage())

@@ -3,9 +3,11 @@
     x:Class="MauiTrackizer.Views.CalendarPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:constants="clr-namespace:MauiTrackizer.Constants"
+    xmlns:selectors="clr-namespace:MauiTrackizer.Selectors"
     Title="CalendarPage"
     BackgroundColor="{StaticResource Gray80}"
-    Shell.BackgroundColor="{StaticResource Gray80}">
+    Shell.BackgroundColor="{StaticResource Gray75}">
     <Shell.TitleView>
         <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Fill">
             <Label
@@ -19,6 +21,71 @@
                 VerticalTextAlignment="Center" />
         </HorizontalStackLayout>
     </Shell.TitleView>
+    <ContentPage.Resources>
+        <DataTemplate x:Key="selectedDayTemplate">
+            <Border
+                Margin="5,0"
+                BackgroundColor="{StaticResource Gray60}"
+                HeightRequest="110"
+                StrokeThickness="0"
+                WidthRequest="55">
+                <FlexLayout
+                    Direction="Column"
+                    HorizontalOptions="Center"
+                    JustifyContent="SpaceBetween">
+                    <VerticalStackLayout>
+                        <Label
+                            Margin="0,10,0,0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalOptions="Center"
+                            Text="{Binding Date}"
+                            TextColor="White" />
+                        <Label
+                            FontAttributes="Bold"
+                            HorizontalOptions="Center"
+                            Text="{Binding Day}"
+                            TextColor="{StaticResource Gray30}" />
+
+                    </VerticalStackLayout>
+                    <Label
+                        Margin="0,0,0,10"
+                        FontFamily="Material"
+                        HorizontalOptions="Center"
+                        Text="{Static constants:MaterialIcons.Circle}"
+                        TextColor="{StaticResource PrimaryAccent100}" />
+                </FlexLayout>
+
+            </Border>
+        </DataTemplate>
+        <DataTemplate x:Key="defaultDayTemplate">
+            <Border
+                Margin="5,0"
+                BackgroundColor="{StaticResource Gray63}"
+                HeightRequest="110"
+                StrokeThickness="0"
+                WidthRequest="55">
+                <VerticalStackLayout>
+                    <Label
+                        Margin="0,10,0,0"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalOptions="Center"
+                        Text="{Binding Date}"
+                        TextColor="White" />
+                    <Label
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        Text="{Binding Day}"
+                        TextColor="{StaticResource Gray30}" />
+                </VerticalStackLayout>
+            </Border>
+        </DataTemplate>
+        <selectors:CalendarDaySelector
+            x:Key="calendarDayTemplateSelector"
+            DefaultTemplate="{StaticResource defaultDayTemplate}"
+            SelectedTemplate="{StaticResource selectedDayTemplate}" />
+    </ContentPage.Resources>
     <ScrollView>
         <Grid RowDefinitions="Auto, 100, *">
             <Border
@@ -54,34 +121,10 @@
                             CornerRadius="20"
                             Text="January" />
                     </FlexLayout>
-                    <CollectionView ItemsSource="{Binding Days}">
+                    <CollectionView ItemTemplate="{StaticResource calendarDayTemplateSelector}" ItemsSource="{Binding Days}">
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout Orientation="Horizontal" />
                         </CollectionView.ItemsLayout>
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Border
-                                    Margin="5,0"
-                                    BackgroundColor="{StaticResource Gray63}"
-                                    HeightRequest="100"
-                                    StrokeThickness="0"
-                                    WidthRequest="55">
-                                    <VerticalStackLayout>
-                                        <Label
-                                            Margin="0,10,0,0"
-                                            FontAttributes="Bold"
-                                            FontSize="Large"
-                                            HorizontalOptions="Center"
-                                            Text="{Binding Date}"
-                                            TextColor="White" />
-                                        <Label
-                                            HorizontalOptions="Center"
-                                            Text="{Binding Day}"
-                                            TextColor="{StaticResource Gray30}" />
-                                    </VerticalStackLayout>
-                                </Border>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
                     </CollectionView>
                 </VerticalStackLayout>
             </Border>

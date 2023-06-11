@@ -79,11 +79,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\" />
-	  <Folder Include="ViewModels\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Controls\Popups\BasePopupPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

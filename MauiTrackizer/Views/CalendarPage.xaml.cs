@@ -1,3 +1,6 @@
+using MauiTrackizer.Models;
+using MauiTrackizer.ViewModels;
+
 namespace MauiTrackizer.Views;
 
 public partial class CalendarPage : ContentPage
@@ -10,7 +13,8 @@ public partial class CalendarPage : ContentPage
         calendar.Days.Add(new DayModel()
         {
             Date = "08",
-            Day = "Mo"
+            Day = "Mo",
+            IsSelected = true
         });
         calendar.Days.Add(new DayModel()
         {
@@ -65,29 +69,4 @@ public partial class CalendarPage : ContentPage
         BindingContext = calendar;
 
     }
-}
-
-public class CalendarViewModel
-{
-    public List<DayModel> Days { get; set; }
-    public List<Subscription> Subscriptions { get; set; }
-
-    public CalendarViewModel()
-    {
-        Days = new List<DayModel>();
-        Subscriptions = new List<Subscription>();
-    }
-}
-
-public class DayModel
-{
-    public string Date { get; set; }
-    public string Day { get; set; }
-}
-
-public class Subscription
-{
-    public string Icon { get; set; }
-    public string Name { get; set; }
-    public string Cost { get; set; }
 }
