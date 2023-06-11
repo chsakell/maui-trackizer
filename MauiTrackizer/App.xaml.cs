@@ -44,6 +44,7 @@ public partial class App : Application
             AppSettings.IsFirstLaunching = true; //Set to 'false' in production
             MainPage = new NavigationPage(new WelcomePage())
             {
+                BackgroundColor = Color.FromRgb(28, 28, 35),
                 BarBackgroundColor = Color.FromRgb(28, 28, 35),
                 BarTextColor = Color.FromRgb(162, 162, 181)
             };
