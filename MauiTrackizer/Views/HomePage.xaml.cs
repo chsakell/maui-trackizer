@@ -4,6 +4,7 @@ using LiveChartsCore.SkiaSharpView;
 using SkiaSharp;
 using LiveChartsCore;
 using MauiTrackizer.Controls;
+using MauiTrackizer.Core;
 
 namespace MauiTrackizer.Views;
 
@@ -14,6 +15,18 @@ public partial class HomePage : ContentPage
         InitializeComponent();
 
         BindingContext = new HomeViewModel();
+    }
+
+    protected async override void OnAppearing()
+    {
+        if (AppSettings.IsFirstLaunching)
+        {
+            AppSettings.IsFirstLaunching = false;
+            await Shell.Current.GoToAsync(nameof(WelcomePage));
+            return;
+        }
+
+        base.OnAppearing();
     }
 
     private async void Button_Clicked(object sender, EventArgs e)
@@ -59,9 +72,9 @@ public partial class HomePage : ContentPage
                 Currency = "USD ($)"
             }
         };
-         
+
         var subscription = subscriptions
-            .FirstOrDefault(sub => sub.Name.Equals(e.Parameter.ToString(), 
+            .FirstOrDefault(sub => sub.Name.Equals(e.Parameter.ToString(),
             StringComparison.InvariantCultureIgnoreCase));
 
         await PopupAction.DisplayPopup(new SubscriptionInfoPage(subscription));

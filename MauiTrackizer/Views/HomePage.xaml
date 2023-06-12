@@ -98,7 +98,7 @@
 
                         <VerticalStackLayout Spacing="0" VerticalOptions="Start">
                             <Border
-                                Stroke="{StaticResource Primary100}"
+                                Stroke="{StaticResource Primary10}"
                                 StrokeThickness="1"
                                 WidthRequest="50" />
                             <Label

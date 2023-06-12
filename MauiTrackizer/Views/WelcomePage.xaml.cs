@@ -9,11 +9,11 @@ public partial class WelcomePage : ContentPage
 
     private async void GetStartedButton_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new SignUpOptionsPage());
+        await Shell.Current.GoToAsync(nameof(SignUpOptionsPage));
     }
 
     private async void AccountButton_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new LoginPage());
+        await Shell.Current.GoToAsync(nameof(LoginPage));
     }
 }

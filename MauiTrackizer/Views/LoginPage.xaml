@@ -4,9 +4,11 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:handlers="clr-namespace:MauiTrackizer.Handlers"
-    Title="LoginPage"
+    Title="Login"
     BackgroundColor="{StaticResource Gray80}"
-    NavigationPage.HasNavigationBar="False">
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="True"
+    Shell.TabBarIsVisible="False">
     <Grid RowDefinitions="*,  Auto">
         <VerticalStackLayout>
             <Image
@@ -85,9 +87,9 @@
 
             <Button
                 BackgroundColor="{StaticResource PrimaryAccent100}"
+                Clicked="Button_Clicked"
                 CornerRadius="50"
                 FontSize="Medium"
-                Clicked="Button_Clicked"
                 Text="Sign In" />
 
             <Label
@@ -104,8 +106,8 @@
                     Text="You don't have an account yet?"
                     TextColor="White" />
                 <Button
-                    Clicked="Button_Clicked"
                     BackgroundColor="{StaticResource Gray70}"
+                    Clicked="Button_Clicked"
                     CornerRadius="30"
                     FontAttributes="Bold"
                     FontSize="Medium"

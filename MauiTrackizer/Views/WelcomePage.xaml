@@ -5,7 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="WelcomePage"
     BackgroundColor="{StaticResource Gray80}"
-    NavigationPage.HasNavigationBar="False">
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="False"
+    Shell.TabBarIsVisible="False">
     <Grid RowDefinitions="*, 100, Auto">
 
         <AbsoluteLayout>
