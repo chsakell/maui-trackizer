@@ -4,7 +4,9 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:constants="clr-namespace:MauiTrackizer.Constants"
+    xmlns:controls="clr-namespace:MauiTrackizer.Controls"
     xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+    xmlns:viewmodels="clr-namespace:MauiTrackizer.ViewModels"
     BackgroundColor="{StaticResource Gray80}"
     Shell.BackgroundColor="{StaticResource Gray80}">
     <Shell.TitleView>
@@ -71,177 +73,9 @@
             </Border>
 
             <VerticalStackLayout Grid.Row="2" Spacing="10">
-                <Border
-                    Padding="5"
-                    BackgroundColor="{StaticResource Gray80}"
-                    StrokeThickness="1">
-                    <Grid
-                        Padding="10"
-                        ColumnDefinitions=".7*,.3*"
-                        RowDefinitions="*,Auto"
-                        VerticalOptions="Center">
-                        <HorizontalStackLayout
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            Spacing="20">
-                            <Label
-                                FontFamily="Material"
-                                FontSize="40"
-                                Text="{Static constants:MaterialIcons.Car_repair}"
-                                TextColor="{StaticResource Gray30}" />
-                            <VerticalStackLayout
-                                Grid.Row="0"
-                                Grid.Column="1"
-                                Spacing="5">
-                                <Label
-                                    FontAttributes="Bold"
-                                    Text="Auto and transport"
-                                    TextColor="White" />
-                                <Label Text="$375 left to spend" TextColor="{StaticResource Gray30}" />
-                            </VerticalStackLayout>
-
-                        </HorizontalStackLayout>
-                        <VerticalStackLayout
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            HorizontalOptions="Center"
-                            Spacing="5">
-                            <Label
-                                FontAttributes="Bold"
-                                HorizontalTextAlignment="End"
-                                Text="$254.99"
-                                TextColor="White" />
-                            <Label
-                                HorizontalTextAlignment="End"
-                                Text="of 400"
-                                TextColor="{StaticResource Gray30}" />
-                        </VerticalStackLayout>
-                        <ProgressBar
-                            Grid.Row="1"
-                            Grid.Column="0"
-                            Grid.ColumnSpan="2"
-                            Margin="0,20,0,0"
-                            BackgroundColor="{StaticResource Gray70}"
-                            HeightRequest="5"
-                            Progress=".2"
-                            ProgressColor="{StaticResource SecondaryAccent100}"
-                            VerticalOptions="End" />
-                    </Grid>
-                </Border>
-                <Border
-                    Padding="5"
-                    BackgroundColor="{StaticResource Gray80}"
-                    StrokeThickness="1">
-                    <Grid
-                        Padding="10"
-                        ColumnDefinitions=".7*,.3*"
-                        RowDefinitions="*,Auto"
-                        VerticalOptions="Center">
-                        <HorizontalStackLayout
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            Spacing="20">
-                            <Label
-                                FontFamily="Material"
-                                FontSize="40"
-                                Text="{Static constants:MaterialIcons.Nightlife}"
-                                TextColor="{StaticResource Gray30}" />
-                            <VerticalStackLayout
-                                Grid.Row="0"
-                                Grid.Column="1"
-                                Spacing="5">
-                                <Label
-                                    FontAttributes="Bold"
-                                    Text="Entertainment"
-                                    TextColor="White" />
-                                <Label Text="$375 left to spend" TextColor="{StaticResource Gray30}" />
-                            </VerticalStackLayout>
-
-                        </HorizontalStackLayout>
-                        <VerticalStackLayout
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            HorizontalOptions="Center"
-                            Spacing="5">
-                            <Label
-                                FontAttributes="Bold"
-                                HorizontalTextAlignment="End"
-                                Text="50.99"
-                                TextColor="White" />
-                            <Label
-                                HorizontalTextAlignment="End"
-                                Text="of 600"
-                                TextColor="{StaticResource Gray30}" />
-                        </VerticalStackLayout>
-                        <ProgressBar
-                            Grid.Row="1"
-                            Grid.Column="0"
-                            Grid.ColumnSpan="2"
-                            Margin="0,20,0,0"
-                            BackgroundColor="{StaticResource Gray70}"
-                            HeightRequest="5"
-                            Progress=".5"
-                            ProgressColor="{StaticResource PrimaryAccent50}"
-                            VerticalOptions="End" />
-                    </Grid>
-                </Border>
-                <Border
-                    Padding="5"
-                    BackgroundColor="{StaticResource Gray80}"
-                    StrokeThickness="1">
-                    <Grid
-                        Padding="10"
-                        ColumnDefinitions=".7*,.3*"
-                        RowDefinitions="*,Auto"
-                        VerticalOptions="Center">
-                        <HorizontalStackLayout
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            Spacing="20">
-                            <Label
-                                FontFamily="Material"
-                                FontSize="40"
-                                Text="{Static constants:MaterialIcons.Fingerprint}"
-                                TextColor="{StaticResource Gray30}" />
-                            <VerticalStackLayout
-                                Grid.Row="0"
-                                Grid.Column="1"
-                                Spacing="5">
-                                <Label
-                                    FontAttributes="Bold"
-                                    Text="Security"
-                                    TextColor="White" />
-                                <Label Text="$375 left to spend" TextColor="{StaticResource Gray30}" />
-                            </VerticalStackLayout>
-
-                        </HorizontalStackLayout>
-                        <VerticalStackLayout
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            HorizontalOptions="Center"
-                            Spacing="5">
-                            <Label
-                                FontAttributes="Bold"
-                                HorizontalTextAlignment="End"
-                                Text="$5.99"
-                                TextColor="White" />
-                            <Label
-                                HorizontalTextAlignment="End"
-                                Text="of 600"
-                                TextColor="{StaticResource Gray30}" />
-                        </VerticalStackLayout>
-                        <ProgressBar
-                            Grid.Row="1"
-                            Grid.Column="0"
-                            Grid.ColumnSpan="2"
-                            Margin="0,20,0,0"
-                            BackgroundColor="{StaticResource Gray70}"
-                            HeightRequest="5"
-                            Progress=".8"
-                            ProgressColor="{StaticResource Primary100}"
-                            VerticalOptions="End" />
-                    </Grid>
-                </Border>
+                <controls:SpendingBudgetControl SpendingBudget="{Binding AutoTransport}" />
+                <controls:SpendingBudgetControl SpendingBudget="{Binding Entertainment}" />
+                <controls:SpendingBudgetControl SpendingBudget="{Binding Security}" />
                 <Border
                     Padding="5"
                     BackgroundColor="{StaticResource Gray80}"
