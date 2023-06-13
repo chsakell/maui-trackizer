@@ -251,6 +251,7 @@
                         BackgroundColor="{StaticResource Gray64}"
                         CornerRadius="40"
                         HeightRequest="40"
+                        Clicked="Button_Clicked"
                         Text="Save" />
                 </FlexLayout>
 

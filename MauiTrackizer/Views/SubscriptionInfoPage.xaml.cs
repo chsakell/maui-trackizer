@@ -1,4 +1,6 @@
 using MauiTrackizer.Controls;
+using MauiTrackizer.Models;
+using MauiTrackizer.ViewModels;
 
 namespace MauiTrackizer.Views;
 
@@ -10,9 +12,9 @@ public partial class SubscriptionInfoPage : BasePopupPage
 
 		BindingContext = new SubscriptionInfoViewModel() { SubscriptionInfo = subscriptionInfo };
 	}
-}
 
-public class SubscriptionInfoViewModel
-{
-	public SubscriptionInfo SubscriptionInfo { get; set; }
+    private async void Button_Clicked(object sender, EventArgs e)
+    {
+        await PopupAction.ClosePopup();
+    }
 }

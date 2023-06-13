@@ -5,6 +5,7 @@ using SkiaSharp;
 using LiveChartsCore;
 using MauiTrackizer.Controls;
 using MauiTrackizer.Core;
+using MauiTrackizer.Models;
 
 namespace MauiTrackizer.Views;
 
@@ -84,34 +85,4 @@ public partial class HomePage : ContentPage
     {
         await Shell.Current.GoToAsync("settings");
     }
-}
-
-public class HomeViewModel
-{
-    public IEnumerable<ISeries> DegreesGaugePieSeries { get; set; }
-    public HomeViewModel()
-    {
-
-        DegreesGaugePieSeries = new GaugeBuilder()
-        //.WithLabelsSize(50)
-        .WithInnerRadius(280)
-        .WithBackgroundInnerRadius(280)
-        .WithBackground(null)
-        .WithLabelsSize(0)
-        .WithLabelsPosition(PolarLabelsPosition.ChartCenter)
-        .AddValue(85, "gauge value", new SKColor(255, 121, 102), SKColors.White)
-        .BuildSeries();
-    }
-}
-
-public class SubscriptionInfo
-{
-    public string Name { get; set; }
-    public string Icon { get; set; }
-    public string Description { get; set; }
-    public string Cost { get; set; }
-    public string Category { get; set; }
-    public string FirstPayment { get; set; }
-    public string Reminder { get; set; }
-    public string Currency { get; set; }
 }
