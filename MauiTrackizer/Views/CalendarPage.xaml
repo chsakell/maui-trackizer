@@ -109,6 +109,7 @@
                     </FlexLayout>
                     <CollectionView
                         HeightRequest="110"
+                        HorizontalScrollBarVisibility="Never"
                         ItemTemplate="{StaticResource calendarDayTemplateSelector}"
                         ItemsSource="{Binding Days}">
                         <CollectionView.ItemsLayout>

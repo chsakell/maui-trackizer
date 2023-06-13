@@ -3,26 +3,16 @@
     x:Class="MauiTrackizer.Views.CreditCardsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Credit Cards"
     BackgroundColor="{StaticResource Gray80}"
     Shell.BackgroundColor="{StaticResource Gray80}">
-    <Shell.TitleView>
-        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Fill">
-            <Label
-                FontSize="Medium"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                HorizontalTextAlignment="Center"
-                Text="Credit Cards"
-                TextColor="{StaticResource Gray30}"
-                VerticalOptions="CenterAndExpand"
-                VerticalTextAlignment="Center" />
-        </HorizontalStackLayout>
-    </Shell.TitleView>
-    <Grid RowDefinitions=".7*,.2*,.2*">
-        <CarouselView Margin="0,20" ItemsSource="{Binding Cards}">
+    <Grid RowDefinitions="400,*,*">
+        <CarouselView Margin="20" ItemsSource="{Binding Cards}">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <Image Source="{Binding Icon}" />
+                    <Image
+                        Aspect="AspectFit"
+                        Source="{Binding Icon}" />
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
