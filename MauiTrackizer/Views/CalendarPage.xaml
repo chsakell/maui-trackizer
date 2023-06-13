@@ -5,28 +5,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:constants="clr-namespace:MauiTrackizer.Constants"
     xmlns:selectors="clr-namespace:MauiTrackizer.Selectors"
-    Title="CalendarPage"
+    Title="Calendar"
     BackgroundColor="{StaticResource Gray80}"
     Shell.BackgroundColor="{StaticResource Gray75}">
-    <Shell.TitleView>
-        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Fill">
-            <Label
-                FontSize="Medium"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                HorizontalTextAlignment="Center"
-                Text="Calendar"
-                TextColor="{StaticResource Gray30}"
-                VerticalOptions="CenterAndExpand"
-                VerticalTextAlignment="Center" />
-        </HorizontalStackLayout>
-    </Shell.TitleView>
     <ContentPage.Resources>
         <DataTemplate x:Key="selectedDayTemplate">
             <Border
                 Margin="5,0"
                 BackgroundColor="{StaticResource Gray60}"
-                HeightRequest="110"
                 StrokeThickness="0"
                 WidthRequest="55">
                 <FlexLayout
@@ -87,7 +73,7 @@
             SelectedTemplate="{StaticResource selectedDayTemplate}" />
     </ContentPage.Resources>
     <ScrollView>
-        <Grid RowDefinitions="Auto, 100, *">
+        <Grid RowDefinitions="300, 100, 300">
             <Border
                 Margin="-2"
                 BackgroundColor="{StaticResource Gray75}"
@@ -121,9 +107,12 @@
                             CornerRadius="20"
                             Text="January" />
                     </FlexLayout>
-                    <CollectionView ItemTemplate="{StaticResource calendarDayTemplateSelector}" ItemsSource="{Binding Days}">
+                    <CollectionView
+                        HeightRequest="110"
+                        ItemTemplate="{StaticResource calendarDayTemplateSelector}"
+                        ItemsSource="{Binding Days}">
                         <CollectionView.ItemsLayout>
-                            <LinearItemsLayout Orientation="Horizontal" />
+                            <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
                         </CollectionView.ItemsLayout>
                     </CollectionView>
                 </VerticalStackLayout>
@@ -173,6 +162,7 @@
                             StrokeThickness="0">
                             <Grid RowDefinitions="*,*">
                                 <Image
+                                    HeightRequest="40"
                                     HorizontalOptions="Start"
                                     Source="{Binding Icon}"
                                     VerticalOptions="Start"
