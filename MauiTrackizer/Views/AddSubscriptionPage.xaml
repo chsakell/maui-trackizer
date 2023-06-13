@@ -9,42 +9,36 @@
     ForegroundColor="Transparent"
     HorizontalOptions="Fill"
     VerticalOptions="FillAndExpand">
-    <Grid BackgroundColor="{StaticResource Gray80}" RowDefinitions=".6*,.4*">
-        <Border
-            Margin="0,-10,0,0"
-            BackgroundColor="{StaticResource Gray75}"
-            StrokeThickness="0">
-            <Grid RowDefinitions="*,*" RowSpacing="10">
-
-                <VerticalStackLayout Margin="0,30">
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="40"
-                        HorizontalOptions="Center"
-                        Text="Add new"
-                        TextColor="White"
-                        VerticalOptions="Center" />
-                    <Label
+    <ScrollView>
+        <Grid BackgroundColor="{StaticResource Gray80}" RowDefinitions="340,*">
+            <Border
+                Margin="0,-10,0,0"
+                BackgroundColor="{StaticResource Gray75}"
+                StrokeThickness="0">
+                <VerticalStackLayout>
+                    <VerticalStackLayout Margin="0,30">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="40"
+                            HorizontalOptions="Center"
+                            Text="Add new"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="1"
+                            FontAttributes="Bold"
+                            FontSize="40"
+                            HorizontalOptions="Center"
+                            Text="subscription"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </VerticalStackLayout>
+                    <CarouselView
                         Grid.Row="1"
-                        FontAttributes="Bold"
-                        FontSize="40"
-                        HorizontalOptions="Center"
-                        Text="subscription"
-                        TextColor="White"
-                        VerticalOptions="Center" />
-                </VerticalStackLayout>
-                <CarouselView
-                    Grid.Row="1"
-                    Margin="0,0,0,30"
-                    ItemsSource="{Binding Subscriptions}">
-                    <CarouselView.ItemTemplate>
-                        <DataTemplate>
-                            <FlexLayout JustifyContent="SpaceBetween">
-                                <Image
-                                    Margin="-10,0,0,0"
-                                    HeightRequest="60"
-                                    Source="{Binding Previous.Icon}"
-                                    VerticalOptions="Center" />
+                        Margin="0,0,0,30"
+                        ItemsSource="{Binding Subscriptions}">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
                                 <VerticalStackLayout Spacing="20">
                                     <Image HeightRequest="100" Source="{Binding Icon}" />
                                     <Label
@@ -54,77 +48,71 @@
                                         Text="{Binding Title}"
                                         TextColor="White" />
                                 </VerticalStackLayout>
-                                <Image
-                                    Margin="0,0,-10,0"
-                                    HeightRequest="60"
-                                    Source="{Binding Next.Icon}" />
-                            </FlexLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
 
-                        </DataTemplate>
-                    </CarouselView.ItemTemplate>
-                </CarouselView>
+                </VerticalStackLayout>
 
-            </Grid>
-
-        </Border>
-        <Grid
-            Grid.Row="1"
-            Margin="20"
-            RowDefinitions="*,*,*"
-            VerticalOptions="End">
-            <VerticalStackLayout Spacing="5">
-                <Label
-                    HorizontalOptions="Center"
-                    Text="Description"
-                    TextColor="{StaticResource Gray50}" />
-                <Border>
-                    <handlers:BorderlessEntry
-                        Margin="8,0"
-                        HeightRequest="40"
-                        HorizontalOptions="FillAndExpand"
-                        Keyboard="Default"
-                        TextColor="White" />
-                </Border>
-            </VerticalStackLayout>
-            <FlexLayout
+            </Border>
+            <Grid
                 Grid.Row="1"
-                Margin="0,20"
-                HeightRequest="50"
-                JustifyContent="SpaceBetween">
-                <Button
-                    BackgroundColor="{StaticResource Gray77}"
-                    CornerRadius="10"
-                    HeightRequest="40"
-                    HorizontalOptions="Center"
-                    Text="-"
-                    WidthRequest="40" />
-                <VerticalStackLayout Spacing="4">
+                Margin="20"
+                RowDefinitions="*,*,*"
+                VerticalOptions="End">
+                <VerticalStackLayout Spacing="5">
                     <Label
                         HorizontalOptions="Center"
-                        Text="Monthly price"
-                        TextColor="{StaticResource Gray40}" />
-                    <Label
-                        FontAttributes="Bold"
-                        HorizontalTextAlignment="Center"
-                        Text="$5.99"
-                        TextColor="White" />
-                    <Border StrokeThickness=".8" WidthRequest="150" />
+                        Text="Description"
+                        TextColor="{StaticResource Gray50}" />
+                    <Border>
+                        <handlers:BorderlessEntry
+                            Margin="8,0"
+                            HeightRequest="40"
+                            HorizontalOptions="FillAndExpand"
+                            Keyboard="Default"
+                            TextColor="White" />
+                    </Border>
                 </VerticalStackLayout>
+                <FlexLayout
+                    Grid.Row="1"
+                    Margin="0,20"
+                    HeightRequest="50"
+                    JustifyContent="SpaceBetween">
+                    <Button
+                        BackgroundColor="{StaticResource Gray77}"
+                        CornerRadius="10"
+                        HeightRequest="40"
+                        HorizontalOptions="Center"
+                        Text="-"
+                        WidthRequest="40" />
+                    <VerticalStackLayout Spacing="4">
+                        <Label
+                            HorizontalOptions="Center"
+                            Text="Monthly price"
+                            TextColor="{StaticResource Gray40}" />
+                        <Label
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"
+                            Text="$5.99"
+                            TextColor="White" />
+                        <Border StrokeThickness=".8" WidthRequest="150" />
+                    </VerticalStackLayout>
+                    <Button
+                        BackgroundColor="{StaticResource Gray77}"
+                        CornerRadius="10"
+                        HeightRequest="40"
+                        Text="+"
+                        WidthRequest="40" />
+                </FlexLayout>
                 <Button
-                    BackgroundColor="{StaticResource Gray77}"
-                    CornerRadius="10"
+                    Grid.Row="2"
+                    BackgroundColor="{StaticResource PrimaryAccent100}"
+                    Clicked="Button_Clicked"
+                    CornerRadius="40"
                     HeightRequest="40"
-                    Text="+"
-                    WidthRequest="40" />
-            </FlexLayout>
-            <Button
-                Grid.Row="2"
-                BackgroundColor="{StaticResource PrimaryAccent100}"
-                CornerRadius="40"
-                HeightRequest="40"
-                Clicked="Button_Clicked"
-                Text="Add this platform" />
+                    Text="Add this platform" />
+            </Grid>
         </Grid>
-    </Grid>
-
+    </ScrollView>
 </controls:BasePopupPage>
