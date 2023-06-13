@@ -9,167 +9,168 @@
     BackgroundColor="{StaticResource Gray80}"
     Shell.BackgroundColor="{StaticResource Gray80}"
     Shell.NavBarIsVisible="False">
-    <Grid RowDefinitions="*,80,*">
-        <Border
-            BackgroundColor="{StaticResource Gray75}"
-            Stroke="#d0d7de"
-            StrokeThickness="0">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="0,0,30,30" />
-            </Border.StrokeShape>
-            <Grid Margin="0,20" RowDefinitions=".7*,.3*">
-                <lvc:PieChart
-                    InitialRotation="-225"
-                    MaxAngle="270"
-                    Series="{Binding DegreesGaugePieSeries}"
-                    Total="100" />
-                <Image
-                    Margin="30"
-                    Aspect="AspectFit"
-                    Source="ellipse_inner.png" />
-                <VerticalStackLayout Spacing="15" VerticalOptions="End">
+    <ScrollView>
+        <Grid RowDefinitions="*,80,*">
+            <Border
+                BackgroundColor="{StaticResource Gray75}"
+                Stroke="#d0d7de"
+                StrokeThickness="0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,0,30,30" />
+                </Border.StrokeShape>
+                <Grid Margin="{OnPlatform iOS='0,0,0,20', Default='0,20'}" RowDefinitions="{OnPlatform iOS='300,60', Default='.7*,.3*'}">
+                    <lvc:PieChart
+                        InitialRotation="-225"
+                        MaxAngle="270"
+                        Series="{Binding DegreesGaugePieSeries}"
+                        Total="100" />
                     <Image
-                        Margin="0,40,0,0"
-                        Source="logo.png"
-                        WidthRequest="110" />
-                    <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
-                        <Label
-                            FontAttributes="Bold"
-                            FontSize="30"
-                            HorizontalOptions="Center"
-                            Text="$1,235"
-                            TextColor="White" />
-                        <Label
-                            FontAttributes="Bold"
-                            FontSize="15"
-                            HorizontalOptions="Center"
-                            Text="This month bills"
-                            TextColor="{StaticResource Gray50}" />
+                        Margin="30"
+                        Aspect="AspectFit"
+                        Source="ellipse_inner.png"
+                        WidthRequest="200" />
+                    <VerticalStackLayout Spacing="15" VerticalOptions="{OnPlatform iOS='Center', Default='Start'}">
+                        <Image
+                            Margin="0,40,0,0"
+                            Source="logo.png"
+                            WidthRequest="110" />
+                        <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="30"
+                                HorizontalOptions="Center"
+                                Text="$1,235"
+                                TextColor="White" />
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="15"
+                                HorizontalOptions="Center"
+                                Text="This month bills"
+                                TextColor="{StaticResource Gray50}" />
+                        </VerticalStackLayout>
+                        <Border
+                            BackgroundColor="{StaticResource Gray70}"
+                            HeightRequest="35"
+                            StrokeThickness="0"
+                            WidthRequest="140">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30" />
+                            </Border.StrokeShape>
+                            <Label
+                                FontSize="Small"
+                                HorizontalOptions="Center"
+                                Text="See your budget"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                        </Border>
+
                     </VerticalStackLayout>
-                    <Border
-                        BackgroundColor="{StaticResource Gray70}"
-                        HeightRequest="35"
-                        StrokeThickness="0"
-                        WidthRequest="140">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="30" />
-                        </Border.StrokeShape>
-                        <Label
-                            FontSize="Small"
-                            HorizontalOptions="Center"
-                            Text="See your budget"
-                            TextColor="White"
-                            VerticalOptions="Center" />
-                    </Border>
+                    <FlexLayout
+                        Grid.Row="2"
+                        JustifyContent="SpaceEvenly"
+                        VerticalOptions="End">
+                        <Border
+                            BackgroundColor="{StaticResource Gray65}"
+                            HeightRequest="70"
+                            StrokeThickness="0"
+                            WidthRequest="100">
+                            <VerticalStackLayout Spacing="0" VerticalOptions="Start">
+                                <Border
+                                    Stroke="{StaticResource PrimaryAccent50}"
+                                    StrokeThickness="1"
+                                    WidthRequest="50" />
+                                <Label
+                                    Margin="0,15,0,0"
+                                    FontAttributes="Bold"
+                                    HorizontalOptions="Center"
+                                    Text="Active subs"
+                                    TextColor="{StaticResource Gray40}" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    HorizontalOptions="Center"
+                                    Text="12"
+                                    TextColor="White" />
+                            </VerticalStackLayout>
+                        </Border>
+                        <Border
+                            BackgroundColor="{StaticResource Gray65}"
+                            HeightRequest="70"
+                            StrokeThickness="0"
+                            WidthRequest="100">
 
-                </VerticalStackLayout>
-                <FlexLayout
-                    Grid.Row="2"
-                    JustifyContent="SpaceEvenly"
-                    VerticalOptions="End">
-                    <Border
-                        BackgroundColor="{StaticResource Gray65}"
-                        HeightRequest="70"
-                        StrokeThickness="0"
-                        WidthRequest="100">
-                        <VerticalStackLayout Spacing="0" VerticalOptions="Start">
-                            <Border
-                                Stroke="{StaticResource PrimaryAccent50}"
-                                StrokeThickness="1"
-                                WidthRequest="50" />
-                            <Label
-                                Margin="0,15,0,0"
-                                FontAttributes="Bold"
-                                HorizontalOptions="Center"
-                                Text="Active subs"
-                                TextColor="{StaticResource Gray40}" />
-                            <Label
-                                FontAttributes="Bold"
-                                HorizontalOptions="Center"
-                                Text="12"
-                                TextColor="White" />
-                        </VerticalStackLayout>
-                    </Border>
-                    <Border
-                        BackgroundColor="{StaticResource Gray65}"
-                        HeightRequest="70"
-                        StrokeThickness="0"
-                        WidthRequest="100">
+                            <VerticalStackLayout Spacing="0" VerticalOptions="Start">
+                                <Border
+                                    Stroke="{StaticResource Primary10}"
+                                    StrokeThickness="1"
+                                    WidthRequest="50" />
+                                <Label
+                                    Margin="0,15,0,0"
+                                    FontAttributes="Bold"
+                                    HorizontalOptions="Center"
+                                    Text="Highest subs"
+                                    TextColor="{StaticResource Gray40}" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    HorizontalOptions="Center"
+                                    Text="$19.99"
+                                    TextColor="White" />
+                            </VerticalStackLayout>
+                        </Border>
+                        <Border
+                            BackgroundColor="{StaticResource Gray65}"
+                            HeightRequest="70"
+                            StrokeThickness="0"
+                            WidthRequest="100">
 
-                        <VerticalStackLayout Spacing="0" VerticalOptions="Start">
-                            <Border
-                                Stroke="{StaticResource Primary10}"
-                                StrokeThickness="1"
-                                WidthRequest="50" />
-                            <Label
-                                Margin="0,15,0,0"
-                                FontAttributes="Bold"
-                                HorizontalOptions="Center"
-                                Text="Highest subs"
-                                TextColor="{StaticResource Gray40}" />
-                            <Label
-                                FontAttributes="Bold"
-                                HorizontalOptions="Center"
-                                Text="$19.99"
-                                TextColor="White" />
-                        </VerticalStackLayout>
-                    </Border>
-                    <Border
-                        BackgroundColor="{StaticResource Gray65}"
-                        HeightRequest="70"
-                        StrokeThickness="0"
-                        WidthRequest="100">
+                            <VerticalStackLayout Spacing="0" VerticalOptions="Start">
+                                <Border
+                                    Stroke="{StaticResource SecondaryAccent50}"
+                                    StrokeThickness="1"
+                                    WidthRequest="50" />
+                                <Label
+                                    Margin="0,15,0,0"
+                                    FontAttributes="Bold"
+                                    HorizontalOptions="Center"
+                                    Text="Lowest subs"
+                                    TextColor="{StaticResource Gray40}" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    HorizontalOptions="Center"
+                                    Text="$5.99"
+                                    TextColor="White" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </FlexLayout>
+                </Grid>
+            </Border>
 
-                        <VerticalStackLayout Spacing="0" VerticalOptions="Start">
-                            <Border
-                                Stroke="{StaticResource SecondaryAccent50}"
-                                StrokeThickness="1"
-                                WidthRequest="50" />
-                            <Label
-                                Margin="0,15,0,0"
-                                FontAttributes="Bold"
-                                HorizontalOptions="Center"
-                                Text="Lowest subs"
-                                TextColor="{StaticResource Gray40}" />
-                            <Label
-                                FontAttributes="Bold"
-                                HorizontalOptions="Center"
-                                Text="$5.99"
-                                TextColor="White" />
-                        </VerticalStackLayout>
-                    </Border>
-                </FlexLayout>
-            </Grid>
-        </Border>
+            <Border
+                Grid.Row="1"
+                Margin="20,0"
+                BackgroundColor="{StaticResource Gray100}"
+                HeightRequest="50"
+                StrokeShape="{RoundRectangle CornerRadius='30'}"
+                StrokeThickness="0">
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    Spacing="20"
+                    VerticalOptions="CenterAndExpand">
+                    <Button
+                        BackgroundColor="{StaticResource Gray80}"
+                        CornerRadius="20"
+                        Text="Your subscriptions"
+                        TextColor="White"
+                        WidthRequest="150" />
+                    <Button
+                        BackgroundColor="Transparent"
+                        CornerRadius="20"
+                        Text="Upcoming bills"
+                        TextColor="{StaticResource Gray30}"
+                        WidthRequest="150" />
+                </HorizontalStackLayout>
+            </Border>
 
-        <Border
-            Grid.Row="1"
-            Margin="20,0"
-            BackgroundColor="{StaticResource Gray100}"
-            HeightRequest="50"
-            StrokeShape="{RoundRectangle CornerRadius='30'}"
-            StrokeThickness="0">
-            <HorizontalStackLayout
-                HorizontalOptions="Center"
-                Spacing="20"
-                VerticalOptions="CenterAndExpand">
-                <Button
-                    BackgroundColor="{StaticResource Gray80}"
-                    CornerRadius="20"
-                    Text="Your subscriptions"
-                    TextColor="White"
-                    WidthRequest="150" />
-                <Button
-                    BackgroundColor="Transparent"
-                    CornerRadius="20"
-                    Text="Upcoming bills"
-                    TextColor="{StaticResource Gray30}"
-                    WidthRequest="150" />
-            </HorizontalStackLayout>
-        </Border>
-
-        <ScrollView Grid.Row="2">
-            <Grid Margin="20,0">
+            <Grid Grid.Row="2" Margin="20,0">
                 <VerticalStackLayout Spacing="5">
                     <Border Stroke="{StaticResource Gray70}" StrokeThickness="1">
                         <Border.StrokeShape>
@@ -261,34 +262,34 @@
                 </VerticalStackLayout>
 
             </Grid>
-        </ScrollView>
-        <AbsoluteLayout
-            Grid.Row="3"
-            Margin="-10"
-            ZIndex="45">
-            <Button
-                AbsoluteLayout.LayoutBounds=".95,.95,80,80"
-                AbsoluteLayout.LayoutFlags="PositionProportional"
-                BackgroundColor="{StaticResource PrimaryAccent100}"
-                Clicked="Button_Clicked"
-                CornerRadius="50"
-                HeightRequest="50"
-                Text="+"
-                WidthRequest="50" />
-        </AbsoluteLayout>
-        <AbsoluteLayout>
-            <ImageButton
-                AbsoluteLayout.LayoutBounds=".95,.1,30,30"
-                AbsoluteLayout.LayoutFlags="PositionProportional"
-                Clicked="SettingsButton_Clicked">
-                <ImageButton.Source>
-                    <FontImageSource
-                        FontFamily="Material"
-                        Glyph="{Static constants:MaterialIcons.Settings}"
-                        Size="44"
-                        Color="{StaticResource Gray30}" />
-                </ImageButton.Source>
-            </ImageButton>
-        </AbsoluteLayout>
-    </Grid>
+            <AbsoluteLayout
+                Grid.Row="3"
+                Margin="-10"
+                ZIndex="45">
+                <Button
+                    AbsoluteLayout.LayoutBounds=".95,.95,80,80"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    BackgroundColor="{StaticResource PrimaryAccent100}"
+                    Clicked="Button_Clicked"
+                    CornerRadius="50"
+                    HeightRequest="50"
+                    Text="+"
+                    WidthRequest="50" />
+            </AbsoluteLayout>
+            <AbsoluteLayout>
+                <ImageButton
+                    AbsoluteLayout.LayoutBounds=".95,.1,30,30"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Clicked="SettingsButton_Clicked">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="Material"
+                            Glyph="{Static constants:MaterialIcons.Settings}"
+                            Size="44"
+                            Color="{StaticResource Gray30}" />
+                    </ImageButton.Source>
+                </ImageButton>
+            </AbsoluteLayout>
+        </Grid>
+    </ScrollView>
 </ContentPage>
