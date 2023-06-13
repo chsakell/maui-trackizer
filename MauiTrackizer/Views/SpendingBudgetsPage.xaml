@@ -7,24 +7,12 @@
     xmlns:controls="clr-namespace:MauiTrackizer.Controls"
     xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
     xmlns:viewmodels="clr-namespace:MauiTrackizer.ViewModels"
+    Title="{Binding Title}"
     BackgroundColor="{StaticResource Gray80}"
     Shell.BackgroundColor="{StaticResource Gray80}">
-    <Shell.TitleView>
-        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Fill">
-            <Label
-                FontSize="Medium"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                HorizontalTextAlignment="Center"
-                Text="{Binding Title}"
-                TextColor="{StaticResource Gray30}"
-                VerticalOptions="CenterAndExpand"
-                VerticalTextAlignment="Center" />
-        </HorizontalStackLayout>
-    </Shell.TitleView>
     <ScrollView>
-        <Grid Margin="20,0,20,10" RowDefinitions="Auto,Auto,*">
-            <Grid Margin="0,20,0,0" HeightRequest="220">
+        <Grid Margin="20,0,20,10" RowDefinitions="180,*">
+            <Grid Margin="0,20,0,0">
                 <lvc:PieChart
                     InitialRotation="-225"
                     MaxAngle="270"
@@ -47,32 +35,30 @@
                         TextColor="{StaticResource Gray50}" />
                 </VerticalStackLayout>
             </Grid>
-            <Border
-                Grid.Row="1"
-                Margin="0,0,0,10"
-                Padding="5"
-                BackgroundColor="{StaticResource Gray80}"
-                HeightRequest="80"
-                StrokeThickness="1">
+            <VerticalStackLayout Grid.Row="1" Spacing="10">
+                <Border
+                    Margin="0,10"
+                    Padding="5"
+                    BackgroundColor="{StaticResource Gray80}"
+                    HeightRequest="80"
+                    StrokeThickness="1">
 
-                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="20"
-                        Text="Your budgets are on track"
-                        TextColor="{StaticResource White}"
-                        VerticalOptions="Center" />
-                    <Label
-                        FontFamily="Material"
-                        FontSize="30"
-                        Text="{Static constants:MaterialIcons.Thumb_up}"
-                        TextColor="#FFDB5E"
-                        VerticalOptions="Center" />
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Text="Your budgets are on track"
+                            TextColor="{StaticResource White}"
+                            VerticalOptions="Center" />
+                        <Label
+                            FontFamily="Material"
+                            FontSize="30"
+                            Text="{Static constants:MaterialIcons.Thumb_up}"
+                            TextColor="#FFDB5E"
+                            VerticalOptions="Center" />
 
-                </HorizontalStackLayout>
-            </Border>
-
-            <VerticalStackLayout Grid.Row="2" Spacing="10">
+                    </HorizontalStackLayout>
+                </Border>
                 <controls:SpendingBudgetControl SpendingBudget="{Binding AutoTransport}" />
                 <controls:SpendingBudgetControl SpendingBudget="{Binding Entertainment}" />
                 <controls:SpendingBudgetControl SpendingBudget="{Binding Security}" />

@@ -7,7 +7,8 @@
     xmlns:local="clr-namespace:MauiTrackizer"
     xmlns:views="clr-namespace:MauiTrackizer.Views"
     BackgroundColor="{StaticResource Gray80}"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.FlyoutBehavior="Disabled"
+    Shell.TitleColor="{StaticResource Gray30}">
     <TabBar
         Shell.TabBarBackgroundColor="{StaticResource Gray62}"
         Shell.TabBarTitleColor="White"
