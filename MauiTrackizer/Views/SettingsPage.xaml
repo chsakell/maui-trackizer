@@ -26,10 +26,11 @@
             <Button
                 BackgroundColor="{StaticResource Gray66}"
                 Clicked="Button_Clicked"
-                CornerRadius="40"
+                CornerRadius="20"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
-                Text="Edit profile" />
+                Text="Edit profile"
+                TextColor="White" />
         </VerticalStackLayout>
         <VerticalStackLayout Grid.Row="1" Spacing="20">
             <Grid RowDefinitions="40, Auto">
@@ -103,7 +104,8 @@
                             HeightRequest="10"
                             HorizontalOptions="End"
                             OnColor="{StaticResource Gray60}"
-                            ThumbColor="White" />
+                            ThumbColor="White"
+                            VerticalOptions="Start" />
                     </Grid>
 
                 </Border>

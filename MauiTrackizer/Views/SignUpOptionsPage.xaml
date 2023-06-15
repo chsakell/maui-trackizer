@@ -24,23 +24,25 @@
             <VerticalStackLayout Spacing="15">
                 <Button
                     BackgroundColor="Black"
-                    CornerRadius="50"
+                    CornerRadius="20"
                     FontSize="Medium"
                     ImageSource="apple.png"
-                    Text="Sign up with Apple" />
+                    Text="Sign up with Apple"
+                    TextColor="White" />
                 <Button
                     BackgroundColor="White"
-                    CornerRadius="50"
+                    CornerRadius="20"
                     FontSize="Medium"
                     ImageSource="google.png"
                     Text="Sign up with Google"
                     TextColor="Black" />
                 <Button
                     BackgroundColor="{StaticResource Blue}"
-                    CornerRadius="50"
+                    CornerRadius="20"
                     FontSize="Medium"
                     ImageSource="facebook.png"
-                    Text="Sign up with Facebook" />
+                    Text="Sign up with Facebook"
+                    TextColor="White" />
 
             </VerticalStackLayout>
 
@@ -57,11 +59,12 @@
                     x:Name="SignUpWithEmail"
                     BackgroundColor="{StaticResource Gray70}"
                     Clicked="SignUpWithEmail_Clicked"
-                    CornerRadius="30"
+                    CornerRadius="20"
                     FontAttributes="Bold"
                     FontSize="Medium"
                     HeightRequest="50"
-                    Text="Sign up with E-mail" />
+                    Text="Sign up with E-mail"
+                    TextColor="White" />
                 <Label
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"

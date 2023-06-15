@@ -65,10 +65,26 @@
                 </StackLayout>
 
                 <FlexLayout JustifyContent="SpaceBetween">
-                    <Border StrokeThickness="3" WidthRequest="90" />
-                    <Border StrokeThickness="3" WidthRequest="90" />
-                    <Border StrokeThickness="3" WidthRequest="90" />
-                    <Border StrokeThickness="3" WidthRequest="90" />
+                    <Border
+                        BackgroundColor="{StaticResource Gray70}"
+                        HeightRequest="10"
+                        StrokeThickness="0"
+                        WidthRequest="70" />
+                    <Border
+                        BackgroundColor="{StaticResource Gray70}"
+                        HeightRequest="10"
+                        StrokeThickness="0"
+                        WidthRequest="70" />
+                    <Border
+                        BackgroundColor="{StaticResource Gray70}"
+                        HeightRequest="10"
+                        StrokeThickness="0"
+                        WidthRequest="70" />
+                    <Border
+                        BackgroundColor="{StaticResource Gray70}"
+                        HeightRequest="10"
+                        StrokeThickness="0"
+                        WidthRequest="70" />
                 </FlexLayout>
 
                 <Label Text="Use 8 or more characters, with a mix of letters, numbers and symbols" TextColor="{DynamicResource Gray50}" />
@@ -78,16 +94,17 @@
             <Button
                 BackgroundColor="{StaticResource PrimaryAccent100}"
                 Clicked="SignInButton_Clicked"
-                CornerRadius="50"
+                CornerRadius="20"
                 FontSize="Medium"
-                Text="Get started, it's free!" />
+                HeightRequest="50"
+                Text="Get started, it's free!"
+                TextColor="White" />
 
             <Label
                 FontSize="Small"
                 HorizontalTextAlignment="Center"
                 Text=""
                 TextColor="{StaticResource White}" />
-
 
             <VerticalStackLayout HorizontalOptions="Fill" Spacing="15">
                 <Label
@@ -99,11 +116,12 @@
                     x:Name="SignInButton"
                     BackgroundColor="{StaticResource Gray70}"
                     Clicked="SignInButton_Clicked"
-                    CornerRadius="30"
+                    CornerRadius="20"
                     FontAttributes="Bold"
                     FontSize="Medium"
                     HeightRequest="50"
-                    Text="Sign In" />
+                    Text="Sign In"
+                    TextColor="White" />
 
             </VerticalStackLayout>
         </VerticalStackLayout>

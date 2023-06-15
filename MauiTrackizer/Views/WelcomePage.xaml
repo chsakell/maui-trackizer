@@ -28,10 +28,10 @@
 
             <Image
                 Margin="-5,0,-5,0"
-                Aspect="AspectFill"
-                Opacity="1"
+                Aspect="AspectFit"
+                HeightRequest="400"
                 Source="welcome_services.png"
-                VerticalOptions="End" />
+                VerticalOptions="Start" />
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Row="2" Margin="0,-40">
@@ -53,20 +53,22 @@
                 x:Name="GetStartedButton"
                 BackgroundColor="{StaticResource PrimaryAccent100}"
                 Clicked="GetStartedButton_Clicked"
-                CornerRadius="30"
+                CornerRadius="20"
                 FontAttributes="Bold"
                 FontSize="Medium"
                 HeightRequest="50"
-                Text="Get started" />
+                Text="Get started"
+                TextColor="White" />
             <Button
                 x:Name="AccountButton"
                 BackgroundColor="{StaticResource Gray66}"
                 Clicked="AccountButton_Clicked"
-                CornerRadius="30"
+                CornerRadius="20"
                 FontAttributes="Bold"
                 FontSize="Medium"
                 HeightRequest="50"
-                Text="I have an account" />
+                Text="I have an account"
+                TextColor="White" />
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

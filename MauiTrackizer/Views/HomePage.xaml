@@ -21,7 +21,7 @@
                     </Border.StrokeShape>
                     <Grid Margin="{OnPlatform iOS='0,0,0,20', Default='0,20'}" RowDefinitions="{OnPlatform iOS='300,60', Default='.7*,.3*'}">
                         <ImageButton
-                            Margin="{OnPlatform iOS='30',
+                            Margin="{OnPlatform iOS='20',
                                                 Default='30,10'}"
                             Clicked="SettingsButton_Clicked"
                             HeightRequest="30"
@@ -37,6 +37,8 @@
                         </ImageButton>
                         <lvc:PieChart
                             InitialRotation="-225"
+                            IsVisible="{OnPlatform iOS='False',
+                                                   Default='True'}"
                             MaxAngle="270"
                             Series="{Binding DegreesGaugePieSeries}"
                             Total="100" />
