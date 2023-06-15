@@ -286,6 +286,7 @@
             HeightRequest="50"
             HorizontalOptions="End"
             Text="+"
+            TextColor="White"
             VerticalOptions="End"
             WidthRequest="50" />
     </Grid>
