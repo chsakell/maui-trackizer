@@ -21,10 +21,11 @@
                     Grid.Row="0"
                     Margin="{Binding Source={x:Reference this}, Path=Margin}"
                     Padding="0"
-                    BackgroundColor="{Binding Source={x:Reference this}, Path=ForegroundColor}"
+                    BackgroundColor="Transparent"
                     HorizontalOptions="{Binding Source={x:Reference this}, Path=HorizontalOptions}"
                     Stroke="Transparent"
                     StrokeShape="{RoundRectangle CornerRadius='0'}"
+                    StrokeThickness="0"
                     VerticalOptions="{Binding Source={x:Reference this}, Path=VerticalOptions}">
                     <ContentPresenter />
                 </Border>

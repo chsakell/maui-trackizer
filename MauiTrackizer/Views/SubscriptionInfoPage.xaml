@@ -10,14 +10,14 @@
     Margin="20"
     HorizontalOptions="Fill"
     VerticalOptions="FillAndExpand">
-    <Grid BackgroundColor="Black" RowDefinitions=".4*,Auto,.6*">
-        <Border BackgroundColor="{StaticResource Gray70}" StrokeThickness="0">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="14,14,40,40" />
-            </Border.StrokeShape>
-            <Grid RowDefinitions="30,*">
-                <Grid Margin="20" ColumnDefinitions="40,*,40">
-                    <ImageButton>
+    <ScrollView>
+        <Grid BackgroundColor="Transparent" RowDefinitions="260,400">
+            <Border BackgroundColor="{StaticResource Gray70}" StrokeThickness="0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="14,14,40,40" />
+                </Border.StrokeShape>
+                <Grid Padding="10" RowDefinitions="50,*">
+                    <ImageButton HorizontalOptions="Start">
                         <ImageButton.Source>
                             <FontImageSource
                                 FontFamily="Material"
@@ -25,13 +25,7 @@
                                 Color="{StaticResource Gray30}" />
                         </ImageButton.Source>
                     </ImageButton>
-                    <Label
-                        Grid.Column="1"
-                        HorizontalOptions="Center"
-                        Text="Subscription info"
-                        TextColor="{StaticResource Gray30}"
-                        VerticalOptions="Center" />
-                    <ImageButton Grid.Column="2">
+                    <ImageButton HorizontalOptions="End">
                         <ImageButton.Source>
                             <FontImageSource
                                 FontFamily="Material"
@@ -39,223 +33,226 @@
                                 Color="{StaticResource Gray30}" />
                         </ImageButton.Source>
                     </ImageButton>
+                    <Label
+                        HorizontalOptions="Center"
+                        Text="Subscription info"
+                        TextColor="{StaticResource Gray30}"
+                        VerticalOptions="Center" />
+                    <VerticalStackLayout
+                        Grid.Row="1"
+                        HorizontalOptions="Center"
+                        Spacing="20"
+                        VerticalOptions="Center">
+                        <Image HeightRequest="100" Source="{Binding SubscriptionInfo.Icon}" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalOptions="Center"
+                            Text="{Binding SubscriptionInfo.Name}"
+                            TextColor="White" />
+                        <Label
+                            Margin="-20"
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            HorizontalOptions="Center"
+                            Text="{Binding SubscriptionInfo.Cost}"
+                            TextColor="{StaticResource Gray30}" />
+                    </VerticalStackLayout>
                 </Grid>
-                <VerticalStackLayout
-                    Grid.Row="1"
-                    HorizontalOptions="Center"
-                    Spacing="20"
-                    VerticalOptions="Center">
-                    <Image HeightRequest="100" Source="{Binding SubscriptionInfo.Icon}" />
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="Large"
-                        HorizontalOptions="Center"
-                        Text="{Binding SubscriptionInfo.Name}"
-                        TextColor="White" />
-                    <Label
-                        Margin="-20"
-                        FontAttributes="Bold"
-                        FontSize="Medium"
-                        HorizontalOptions="Center"
-                        Text="{Binding SubscriptionInfo.Cost}"
-                        TextColor="{StaticResource Gray30}" />
-                </VerticalStackLayout>
-            </Grid>
-        </Border>
-        <Border
-            Grid.Row="1"
-            Margin="40,-1"
-            Stroke="Black"
-            StrokeDashArray="10,4"
-            StrokeDashOffset="1"
-            StrokeThickness="1" />
-        <Border
-            Grid.Row="2"
-            BackgroundColor="{StaticResource Gray75}"
-            StrokeThickness="0">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="40,40,14,14" />
-            </Border.StrokeShape>
-            <Border
-                Margin="20"
-                Padding="20"
-                BackgroundColor="{StaticResource Gray65}"
-                StrokeThickness="0">
-
-                <FlexLayout Direction="Column" JustifyContent="SpaceBetween">
-                    <Grid
-                        ColumnDefinitions="*,*"
-                        RowDefinitions="*,*,*,*,*,*"
-                        RowSpacing="20">
-                        <Label
-                            Grid.Row="0"
-                            FontSize="Medium"
-                            Text="Name"
-                            TextColor="White"
-                            VerticalOptions="Center" />
-                        <HorizontalStackLayout
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            HorizontalOptions="End">
-                            <Label
-                                FontSize="Small"
-                                Text="{Binding SubscriptionInfo.Name}"
-                                TextColor="{StaticResource Gray30}"
-                                VerticalOptions="Center" />
-                            <ImageButton VerticalOptions="Center">
-                                <ImageButton.Source>
-                                    <FontImageSource
-                                        FontFamily="Material"
-                                        Glyph="{Static constants:MaterialIcons.Chevron_right}"
-                                        Size="20"
-                                        Color="{StaticResource Gray30}" />
-                                </ImageButton.Source>
-                            </ImageButton>
-                        </HorizontalStackLayout>
-
-                        <Label
-                            Grid.Row="1"
-                            FontSize="Medium"
-                            Text="Description"
-                            TextColor="White"
-                            VerticalOptions="Center" />
-                        <HorizontalStackLayout
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            HorizontalOptions="End">
-                            <Label
-                                FontSize="Small"
-                                Text="{Binding SubscriptionInfo.Description}"
-                                TextColor="{StaticResource Gray30}"
-                                VerticalOptions="Center" />
-                            <ImageButton VerticalOptions="Center">
-                                <ImageButton.Source>
-                                    <FontImageSource
-                                        FontFamily="Material"
-                                        Glyph="{Static constants:MaterialIcons.Chevron_right}"
-                                        Size="20"
-                                        Color="{StaticResource Gray30}" />
-                                </ImageButton.Source>
-                            </ImageButton>
-                        </HorizontalStackLayout>
-
-
-                        <Label
-                            Grid.Row="2"
-                            FontSize="Medium"
-                            Text="Category"
-                            TextColor="White"
-                            VerticalOptions="Center" />
-                        <HorizontalStackLayout
-                            Grid.Row="2"
-                            Grid.Column="1"
-                            HorizontalOptions="End">
-                            <Label
-                                FontSize="Small"
-                                Text="{Binding SubscriptionInfo.Category}"
-                                TextColor="{StaticResource Gray30}"
-                                VerticalOptions="Center" />
-                            <ImageButton VerticalOptions="Center">
-                                <ImageButton.Source>
-                                    <FontImageSource
-                                        FontFamily="Material"
-                                        Glyph="{Static constants:MaterialIcons.Chevron_right}"
-                                        Size="20"
-                                        Color="{StaticResource Gray30}" />
-                                </ImageButton.Source>
-                            </ImageButton>
-                        </HorizontalStackLayout>
-
-
-                        <Label
-                            Grid.Row="3"
-                            FontSize="Medium"
-                            Text="First payment"
-                            TextColor="White"
-                            VerticalOptions="Center" />
-                        <HorizontalStackLayout
-                            Grid.Row="3"
-                            Grid.Column="1"
-                            HorizontalOptions="End">
-                            <Label
-                                FontSize="Small"
-                                Text="{Binding SubscriptionInfo.FirstPayment}"
-                                TextColor="{StaticResource Gray30}"
-                                VerticalOptions="Center" />
-                            <ImageButton VerticalOptions="Center">
-                                <ImageButton.Source>
-                                    <FontImageSource
-                                        FontFamily="Material"
-                                        Glyph="{Static constants:MaterialIcons.Chevron_right}"
-                                        Size="20"
-                                        Color="{StaticResource Gray30}" />
-                                </ImageButton.Source>
-                            </ImageButton>
-                        </HorizontalStackLayout>
-
-
-                        <Label
-                            Grid.Row="4"
-                            FontSize="Medium"
-                            Text="Reminder"
-                            TextColor="White"
-                            VerticalOptions="Center" />
-                        <HorizontalStackLayout
-                            Grid.Row="4"
-                            Grid.Column="1"
-                            HorizontalOptions="End">
-                            <Label
-                                FontSize="Small"
-                                Text="{Binding SubscriptionInfo.Reminder}"
-                                TextColor="{StaticResource Gray30}"
-                                VerticalOptions="Center" />
-                            <ImageButton VerticalOptions="Center">
-                                <ImageButton.Source>
-                                    <FontImageSource
-                                        FontFamily="Material"
-                                        Glyph="{Static constants:MaterialIcons.Chevron_right}"
-                                        Size="20"
-                                        Color="{StaticResource Gray30}" />
-                                </ImageButton.Source>
-                            </ImageButton>
-                        </HorizontalStackLayout>
-
-
-                        <Label
-                            Grid.Row="5"
-                            FontSize="Medium"
-                            Text="Currency"
-                            TextColor="White"
-                            VerticalOptions="Center" />
-                        <HorizontalStackLayout
-                            Grid.Row="5"
-                            Grid.Column="1"
-                            HorizontalOptions="End">
-                            <Label
-                                FontSize="Small"
-                                Text="{Binding SubscriptionInfo.Currency}"
-                                TextColor="{StaticResource Gray30}"
-                                VerticalOptions="Center" />
-                            <ImageButton VerticalOptions="Center">
-                                <ImageButton.Source>
-                                    <FontImageSource
-                                        FontFamily="Material"
-                                        Glyph="{Static constants:MaterialIcons.Chevron_right}"
-                                        Size="20"
-                                        Color="{StaticResource Gray30}" />
-                                </ImageButton.Source>
-                            </ImageButton>
-                        </HorizontalStackLayout>
-                    </Grid>
-                    <Button
-                        BackgroundColor="{StaticResource Gray64}"
-                        CornerRadius="40"
-                        HeightRequest="40"
-                        Clicked="Button_Clicked"
-                        Text="Save" />
-                </FlexLayout>
-
             </Border>
-        </Border>
-    </Grid>
+            <Border
+                Grid.Row="2"
+                BackgroundColor="{StaticResource Gray75}"
+                StrokeThickness="0"
+                VerticalOptions="FillAndExpand">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="40,40,14,14" />
+                </Border.StrokeShape>
+                <Border
+                    Margin="10"
+                    Padding="30,30,30,0"
+                    BackgroundColor="{StaticResource Gray65}"
+                    StrokeThickness="0">
+
+                    <Grid RowDefinitions="*,30">
+                        <Grid
+                            ColumnDefinitions="*,*"
+                            RowDefinitions="*,*,*,*,*,*"
+                            RowSpacing="10">
+                            <Label
+                                Grid.Row="0"
+                                FontSize="Medium"
+                                Text="Name"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <HorizontalStackLayout
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                HorizontalOptions="End">
+                                <Label
+                                    FontSize="Small"
+                                    Text="{Binding SubscriptionInfo.Name}"
+                                    TextColor="{StaticResource Gray30}"
+                                    VerticalOptions="Center" />
+                                <ImageButton VerticalOptions="Center">
+                                    <ImageButton.Source>
+                                        <FontImageSource
+                                            FontFamily="Material"
+                                            Glyph="{Static constants:MaterialIcons.Chevron_right}"
+                                            Size="20"
+                                            Color="{StaticResource Gray30}" />
+                                    </ImageButton.Source>
+                                </ImageButton>
+                            </HorizontalStackLayout>
+
+                            <Label
+                                Grid.Row="1"
+                                FontSize="Medium"
+                                Text="Description"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <HorizontalStackLayout
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                HorizontalOptions="End">
+                                <Label
+                                    FontSize="Small"
+                                    Text="{Binding SubscriptionInfo.Description}"
+                                    TextColor="{StaticResource Gray30}"
+                                    VerticalOptions="Center" />
+                                <ImageButton VerticalOptions="Center">
+                                    <ImageButton.Source>
+                                        <FontImageSource
+                                            FontFamily="Material"
+                                            Glyph="{Static constants:MaterialIcons.Chevron_right}"
+                                            Size="20"
+                                            Color="{StaticResource Gray30}" />
+                                    </ImageButton.Source>
+                                </ImageButton>
+                            </HorizontalStackLayout>
+
+
+                            <Label
+                                Grid.Row="2"
+                                FontSize="Medium"
+                                Text="Category"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <HorizontalStackLayout
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                HorizontalOptions="End">
+                                <Label
+                                    FontSize="Small"
+                                    Text="{Binding SubscriptionInfo.Category}"
+                                    TextColor="{StaticResource Gray30}"
+                                    VerticalOptions="Center" />
+                                <ImageButton VerticalOptions="Center">
+                                    <ImageButton.Source>
+                                        <FontImageSource
+                                            FontFamily="Material"
+                                            Glyph="{Static constants:MaterialIcons.Chevron_right}"
+                                            Size="20"
+                                            Color="{StaticResource Gray30}" />
+                                    </ImageButton.Source>
+                                </ImageButton>
+                            </HorizontalStackLayout>
+
+
+                            <Label
+                                Grid.Row="3"
+                                FontSize="Medium"
+                                Text="First payment"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <HorizontalStackLayout
+                                Grid.Row="3"
+                                Grid.Column="1"
+                                HorizontalOptions="End">
+                                <Label
+                                    FontSize="Small"
+                                    Text="{Binding SubscriptionInfo.FirstPayment}"
+                                    TextColor="{StaticResource Gray30}"
+                                    VerticalOptions="Center" />
+                                <ImageButton VerticalOptions="Center">
+                                    <ImageButton.Source>
+                                        <FontImageSource
+                                            FontFamily="Material"
+                                            Glyph="{Static constants:MaterialIcons.Chevron_right}"
+                                            Size="20"
+                                            Color="{StaticResource Gray30}" />
+                                    </ImageButton.Source>
+                                </ImageButton>
+                            </HorizontalStackLayout>
+
+
+                            <Label
+                                Grid.Row="4"
+                                FontSize="Medium"
+                                Text="Reminder"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <HorizontalStackLayout
+                                Grid.Row="4"
+                                Grid.Column="1"
+                                HorizontalOptions="End">
+                                <Label
+                                    FontSize="Small"
+                                    Text="{Binding SubscriptionInfo.Reminder}"
+                                    TextColor="{StaticResource Gray30}"
+                                    VerticalOptions="Center" />
+                                <ImageButton VerticalOptions="Center">
+                                    <ImageButton.Source>
+                                        <FontImageSource
+                                            FontFamily="Material"
+                                            Glyph="{Static constants:MaterialIcons.Chevron_right}"
+                                            Size="20"
+                                            Color="{StaticResource Gray30}" />
+                                    </ImageButton.Source>
+                                </ImageButton>
+                            </HorizontalStackLayout>
+
+
+                            <Label
+                                Grid.Row="5"
+                                FontSize="Medium"
+                                Text="Currency"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <HorizontalStackLayout
+                                Grid.Row="5"
+                                Grid.Column="1"
+                                HorizontalOptions="End">
+                                <Label
+                                    FontSize="Small"
+                                    Text="{Binding SubscriptionInfo.Currency}"
+                                    TextColor="{StaticResource Gray30}"
+                                    VerticalOptions="Center" />
+                                <ImageButton VerticalOptions="Center">
+                                    <ImageButton.Source>
+                                        <FontImageSource
+                                            FontFamily="Material"
+                                            Glyph="{Static constants:MaterialIcons.Chevron_right}"
+                                            Size="20"
+                                            Color="{StaticResource Gray30}" />
+                                    </ImageButton.Source>
+                                </ImageButton>
+                            </HorizontalStackLayout>
+                        </Grid>
+                        <Button
+                            Grid.Row="1"
+                            Margin="0,20"
+                            BackgroundColor="{StaticResource Gray64}"
+                            Clicked="Button_Clicked"
+                            CornerRadius="20"
+                            HeightRequest="50"
+                            Text="Save"
+                            TextColor="White"
+                            VerticalOptions="End" />
+                    </Grid>
+
+                </Border>
+            </Border>
+        </Grid>
+    </ScrollView>
 </controls:BasePopupPage>
