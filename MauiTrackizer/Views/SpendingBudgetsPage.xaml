@@ -81,7 +81,7 @@
                             BackgroundColor="Transparent"
                             BorderColor="{StaticResource Gray30}"
                             BorderWidth="1"
-                            CornerRadius="40"
+                            CornerRadius="20"
                             FontSize="14"
                             HeightRequest="40"
                             Text="+"

@@ -13,28 +13,16 @@
         Shell.TabBarBackgroundColor="{StaticResource Gray62}"
         Shell.TabBarTitleColor="White"
         Shell.TabBarUnselectedColor="{StaticResource Gray30}">
-        <Tab Title="Home">
-            <Tab.Icon>
-                <FontImageSource FontFamily="Material" Glyph="{Static constants:MaterialIcons.Home}" />
-            </Tab.Icon>
+        <Tab Title="Home" Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
         </Tab>
-        <Tab Title="Budget">
-            <Tab.Icon>
-                <FontImageSource FontFamily="Material" Glyph="{Static constants:MaterialIcons.Wallet}" />
-            </Tab.Icon>
+        <Tab Title="Budget" Icon="budgets.png">
             <ShellContent ContentTemplate="{DataTemplate views:SpendingBudgetsPage}" />
         </Tab>
-        <Tab Title="Calendar">
-            <Tab.Icon>
-                <FontImageSource FontFamily="Material" Glyph="{Static constants:MaterialIcons.Calendar_today}" />
-            </Tab.Icon>
+        <Tab Title="Calendar" Icon="calendar.png">
             <ShellContent ContentTemplate="{DataTemplate views:CalendarPage}" />
         </Tab>
-        <Tab Title="Cards">
-            <Tab.Icon>
-                <FontImageSource FontFamily="Material" Glyph="{Static constants:MaterialIcons.Credit_card}" />
-            </Tab.Icon>
+        <Tab Title="Cards" Icon="credit_cards.png">
             <ShellContent ContentTemplate="{DataTemplate views:CreditCardsPage}" />
         </Tab>
     </TabBar>

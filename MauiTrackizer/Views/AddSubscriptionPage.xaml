@@ -85,6 +85,7 @@
                         HeightRequest="40"
                         HorizontalOptions="Center"
                         Text="-"
+                        TextColor="{StaticResource Gray60}"
                         WidthRequest="40" />
                     <VerticalStackLayout Spacing="4">
                         <Label
@@ -103,15 +104,17 @@
                         CornerRadius="10"
                         HeightRequest="40"
                         Text="+"
+                        TextColor="{StaticResource Gray60}"
                         WidthRequest="40" />
                 </FlexLayout>
                 <Button
                     Grid.Row="2"
                     BackgroundColor="{StaticResource PrimaryAccent100}"
                     Clicked="Button_Clicked"
-                    CornerRadius="40"
+                    CornerRadius="20"
                     HeightRequest="40"
-                    Text="Add this platform" />
+                    Text="Add this platform"
+                    TextColor="White" />
             </Grid>
         </Grid>
     </ScrollView>

@@ -50,7 +50,7 @@
                 BackgroundColor="{StaticResource Gray75}"
                 HeightRequest="70"
                 StrokeDashArray="4,4"
-                StrokeDashOffset="1"
+                StrokeDashOffset="2"
                 StrokeThickness="1"
                 WidthRequest="290">
 
@@ -65,7 +65,7 @@
                         BackgroundColor="Transparent"
                         BorderColor="{StaticResource Gray30}"
                         BorderWidth="1"
-                        CornerRadius="40"
+                        CornerRadius="20"
                         FontSize="14"
                         HeightRequest="40"
                         Text="+"
