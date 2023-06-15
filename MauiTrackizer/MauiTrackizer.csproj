@@ -40,11 +40,11 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" BaseSize="100,100" Color="#1C1C23" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" />
     
     <!-- Tab Bar icons -->
     <MauiImage Update="Resources\Images\home.png" BaseSize="20,20" />
@@ -83,6 +83,7 @@
 	  <None Remove="Resources\Images\welcome_glow.png" />
 	  <None Remove="Resources\Images\welcome_services.png" />
 	  <None Remove="Resources\Images\youtube_logo.png" />
+	  <None Remove="Resources\Splash\splash.svg" />
 	</ItemGroup>
 
 	<ItemGroup>

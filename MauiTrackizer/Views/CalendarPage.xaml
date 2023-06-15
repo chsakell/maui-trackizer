@@ -105,7 +105,8 @@
                         <Button
                             BackgroundColor="{StaticResource Gray70}"
                             CornerRadius="20"
-                            Text="January" />
+                            Text="January"
+                            TextColor="White" />
                     </FlexLayout>
                     <CollectionView
                         HeightRequest="110"
