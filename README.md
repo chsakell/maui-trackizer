@@ -4,4 +4,4 @@ Cross-platform application built with **.NET MAUI** - UI challenge based on [Tra
 
 ## Tested on Android, iOS & windows
 
-![Trackizer](https://github.com/chsakell/maui-trackizer/blob/main/docs/trackizer.gif)
+![Trackizer](https://github.com/chsakell/maui-trackizer/blob/main/docs/trackizer-app.gif)
