@@ -18,18 +18,6 @@ public partial class HomePage : ContentPage
         BindingContext = new HomeViewModel();
     }
 
-    protected async override void OnAppearing()
-    {
-        if (AppSettings.IsFirstLaunching)
-        {
-            AppSettings.IsFirstLaunching = false;
-            await Shell.Current.GoToAsync(nameof(WelcomePage));
-            return;
-        }
-
-        base.OnAppearing();
-    }
-
     private async void Button_Clicked(object sender, EventArgs e)
     {
         await PopupAction.DisplayPopup(new AddSubscriptionPage());

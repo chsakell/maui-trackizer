@@ -13,6 +13,12 @@
         Shell.TabBarBackgroundColor="{StaticResource Gray62}"
         Shell.TabBarTitleColor="White"
         Shell.TabBarUnselectedColor="{StaticResource Gray30}">
+        <Tab
+            x:Name="WelcomeTab"
+            Title="Welcome"
+            IsVisible="True">
+            <ShellContent ContentTemplate="{DataTemplate views:WelcomePage}" />
+        </Tab>
         <Tab Title="Home" Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
         </Tab>
@@ -25,6 +31,7 @@
         <Tab Title="Cards" Icon="credit_cards.png">
             <ShellContent ContentTemplate="{DataTemplate views:CreditCardsPage}" />
         </Tab>
+
     </TabBar>
 
 </Shell>
